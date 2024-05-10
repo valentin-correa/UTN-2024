@@ -1,0 +1,29 @@
+cat /etc/passwd (Sirve para ver los usuarios)
+su - (Sirve para pasar a modo root)
+echo (funciona como print)
+cat (Concatenar/mostrar archivos)
+ls(permite ver los directorios)
+-l (Mostrarlo en forma de listado)
+pwd(permite ver en que carpeta/directorio nos encontramos)
+$SHELL (se refiere a la variable de entorno que almacena la ruta del intérprete de comandos o shell actual)
+man(manual de usuario)
+--help(da ayuda)
+q(salir)
+cd(cambiar de directorio)
+mkdir (crea directorios)
+cp(copia, no hace falta crear el archivo previamente, si el archivo existiera se pisa)
+mv(mueve/renombra)
+rm(BORRAR)
+
+Las opciones suelen ir con un - antes
+Los archivos/directorios que aparecen con un . son ocultos
+
+FUNDAMENTALES:
+cat
+echo
+ls opc parm --help
+pwd
+man
+cd
+mkdir
+cp mv rm

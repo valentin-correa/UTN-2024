@@ -1,0 +1,126 @@
+CLASE SO - 06.05.24
+
+PLANIFICACIÓN DE PROCESOS----------------------------------------------------------------------------------------------------------------------------------------------
+
+La planificación es un software que se encarga de decir qué proceso va a ir en ejecución y en qué tiempo de acuerdo al tipo de sistema.
+
+Tipos de algoritmos de planificación:
+No apropiativos: selecciona un proceso para ejecutarlo y después solo deja que se ejecute hasta que el mimso se bloquea o hasta que libera la CPU en forma voluntaria
+Apropiativos: selecciona un proceso y deja que se ejecute por un máximo de tiempo fijo
+
+
+COMUNICACIÓN ENTRE PROCESOS--------------------------------------------------------------------------------------------------------------------------------------------
+
+Debemos comunicar porque los procesos utilizan espacios de memoria diferentes y para poder realizar cosas externas a ellas debe haber comunicación
+Tiene que haber un mecanismo de control. En este caso seria el SO
+
+Muchas veces determinar el orden de llegada para el consumo de algo no es lo mejor
+Tengo que comunicar para saber si los dos tienen las mismas prioridades y permisos
+Muchas veces hay dependencia de los recursos que hace que haya un orden (...)
+
+Exclusión mutua y región crítica
+Los procesos se tienen que excluir mutuamente.
+Región crítica es la parte del proceso donde se produce la exclusión mutua. Donde se intenta ejecutar el acceso a un determinado recurso. Donde se accede al recurso compartido. Es el pedazo de código, al fin y al cabo.
+
+4 condiciones
+	1. No puede haber dos procesos de manera simultánea en sus regiones críticas
+	2. No pueden hacerse suposiciones acerca de velocidad y cpu
+	3. Ningun proceso que no esté en su sección crítica puede bloquear a otro
+	4. Ningún proceso tiene que esperar por siempre para entrar en su región crítica
+
+Exclusión mutua con espera ocupada (VER)
+Es cuando A tiene un recurso
+	Deshabilitar interrupciones
+	Variables candado
+	Alternancia estricta
+		Primero voy yo y después vos
+	Solución de Peterson
+		Mejora de la alternancia estricta, 
+		se utilizan llamadas a procedimientos, 
+		no se viola la condición 3 
+		y se utilizan variables señal y turno
+
+Dormir y despertar
+Son semáforos
+Problema de inversión de prioridades
+	Sleep: bloquea
+	Wake up: activa
+
+Resolver el problema del productor-consumidor
+
+Un semáforo es una variable que me...
+
+
+INTERBLOQUEOS----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+El interbloqueo es una situación indeseada
+
+Ninguno se puede:
+	-Ejecutar
+	-Liberar recursos
+	-Ser despertado
+
+Los recursos se adquieren por los procesos que se utilizan. Se liberan a lo largo del tiempo.
+
+Los recursos se pueden clasificar en apropiativos y no apropiativos. Los apropiativos pueden ser la RAM (el SO se puede apropiar del proceso y sacarlo) y no apropiativos la grabadora de CD (el SO no puede apropiarse del proceso para sacarlo).
+
+Semáforos o mutexes asociados al recurso: son estructuras que utiliza el SO para ordenar los recursos.
+El semáforo es una variable de tres estados
+Son variables que, de acuerdo a su estado, el proceso se puede ejecutar o no.
+
+Abrazo mortal
+Cada uno de los procesos involucrados se bloquea hasta conseguir el recurso que tiene el otro proceso
+Un conjunto de procesos está en un abrazo mortal cuando todos los procesos en ese conjunto están esperando un evento que sólo puede ser causado por otro proceso en el conjunto
+
+Condiciones para los interbloqueos
+	-Exclusión mutua: un recurso se asigna a un solo proceso en el tiempo o está libre. se da entre los procesos
+	-Contención y espera: si un proceso tiene un recurso puede solicitar otro
+	-No apropiativa: no se puede quitar por la fuerza un recurso, se deben liberar
+	-Espera circular: debe haber una cadena circular donde cada uno espera por el recurso del otro
+Con estas 4 condiciones se pueden dar los interbloqueos
+
+Los interbloqueos ocurren rara vez, hacer de cuenta que no pasa nada
+A veces es más costoso revisar que dejar que pase.
+
+Para liberar el interbloqueo lo que hacemos es atacar cualquiera de estas 4 condiciones.
+Mientras una de estas no se produzca no pasa nada.
+
+Recuperación de interbloqueos:
+	Recuperación por medio de la apropiación
+		En algunos casos manual
+		Casi imposible recuperarse
+	Recuperación a través del retroceso: puntos de comprobación periódicas
+	Recuperación a través de la eliminación de procesos
+		Se puede borrar un proceso que no esté en interbloqueo pero que libere un recurso en particular
+		Cuidado con el proceso que se elije para eliminar
+
+Cómo evitar interbloqueos:
+	Intentar no asignar todos los recursos a la vez, que se soliciten en orden de acuerdo a la demanda de los demás.
+	Otorgar el recurso cuando sea seguro y no genere interbloqueo
+
+
+Como prevenir interbloqueos:
+4 condiciones de Coffman:
+	Atacar la condición de exclusión mutua
+	Atacar la condición de contención y esepra
+	Atacar la condición no apropiativa
+	Atacar la condición de espera circular
+
+ADMINISTRACIÓN DE MEMORIA----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,94 @@
+CLASE SO 29.04.24
+
+Lunes 13/04/24 parcial 
+
+BCP Bloque de Control de Procesos
+Tabla que contiene datos o información de los procesos
+
+El proceso puede cambiar de nombre, usuario, etc., pero nunca puede cambiar su ID.
+
+mount -> establecer punto de montaje
+vincula una ruta con algún tipo de dispositivo o proceso
+"esta ruta está relacionada a esto"
+ruta /proc está gestionada por un proceso del SO
+todo lo que está adentro de esa ruta está gestionado por ese SO
+si reinicio la computadora el contenido de /proc va a desaparecer
+si vemos lo que está en /proc vamos a ver muchos números, eso es pq se trata de los ID de los procesos
+
+594 es una variable que existe siempre q muestra mi proceso actual
+se supone que va a existir un directorio dentro de /proc con ese id
+puedo hacer cd /proc/594 y no deberia dar error
+
+Unix y Linux fueron diseñados para q todo se comporte como un archivo
+
+si ejecuto ls -l exe
+voy a ver cual es el programa en base al cual se ejecutó este proceso
+
+el archivo que muestra va a ser un binario de tipo ejecutable, por su capacidad de poder ser ejecutado, es decir, transformado en un proceso
+
+apt install build-essentials
+se debe instalar esto si queres ver las instrucciones del proceso
+
+VERIFICAR: lo q hay en los archivos son los códigos de ejecución
+
+en la computadora todo son binarios
+el programa es el molde
+el proceso es lo que se hace en base a ese molde
+
+cracker.c es el código fuente
+en todo lo que vimos, el programa es el compilado (cracker)
+el programa pasa de la mem secundaria a la mem principal y ahí es donde recien comienza a ejecutarse el proceso
+
+q algo sea binario no significa que vaya a ser un programa
+puede ser una foto, un texto, un audio...
+
+todos los ejecutables de linux arrancan con elf (verificar)
+
+proceso zombie es un proceso web
+proceso padre es el que solicita la ejecución de un proceso
+el proceso padre del ls es el intérprete de comandos, porq es quien solicita su ejecución
+un proceso zombie es, según el libro, un proceso que se queda sin el padre
+en el caso de un SO real, como linux, eso no se cumple nunca. porque si el proceso padre termina se adopta otro como proceso padre. Puede adoptarse como padre al abuelo, por ejemplo.
+En linux el proceso zombie es cuando el proceso padre deja de responder (verificar)
+si el proceso padre no atiende al hijo (despues de terminado el proceso hijo) es donde se produce un caso de proceso zombie (en linux)
+si hay procesos zombies es pq ando anda mal. el padre puede estar bloqueado o colgado. está mal programado el proceso padre.
+
+quienes se comunican con el SO son los procesos, no los usuarios
+como usuario me comunico con el proceso y el mismo con el SO
+
+
+¿Como se comunica el proceso con el SO?
+A través de llamadas al sistema (pedirle algo al SO)
+Lo único que proveé al SO los programadores son las llamadas al sistema
+
+Para guardar un archivo tengo que abrirlo, escribirlo y cerrarlo (guardarlo)
+Estas 3 son llamadas al sistema
+
+¿Cuál es el proceso inverso? (la comunicación del SO a los procesos)
+Rta: señales
+Es un mecanismo mucho más acotado. El SO tiene poca comunicación con los procesos.
+
+man 7 signal
+podré ver las señales implementadas en un SO
+
+existen 31 señales (apróx.) que tiene el SO para enviar a los procesos
+en comparación con las 330 (apróx.) llamadas al sistema que pueden hacer los procesos sobre los SO
+
+señales atrapables: señales las cuales el proceso puede decidir qué hacer
+señales no atrapables: señales las cuales el proceso no puede decidir qué hacer (no puede tomar ninguna acción al respecto)
+normalmente existe una señal semejante en las dos versiones
+el ejemplo más claro es 15 y 9 (SIGTERM y SIGKILL) (atrapable y no atrapable respectivamente) hacen aprox. lo mismo: terminar un proceso
+
+el comando (programa) kill usa llamadas al sistema y señales (los dos tipos de comunicación al mismo tiempo)
+sirve para enviar señales a los procesos (verificar)
+(repasar lo de kill que no quedó claro)
+
+fork
+es la llamada al sistema que solicita al SO crear un proceso
+
+
+
+
+
+
+"piérdanle el miedo a los 1s y 0s, al fin y al cabo es todo lo que hay"
