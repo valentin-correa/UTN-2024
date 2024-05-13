@@ -1,0 +1,32 @@
+MAPA DE PROCESOS {
+	ESTRATÉGICOS
+		- Proceso de establecimiento de tarifas y servicios
+		- Proceso de planeamiento de nuevas canchas
+		- Proceso de planeamiento de nuevos deportes
+		- Proceso de establecimiento de horarios
+	CENTRALES
+		- Proceso de gestión de reservas
+		- Proceso de alquiler de cancha
+	DE  SOPORTE
+		- Proceso de mantenimiento de canchas
+		- Proceso de compra de insumos
+}
+
+PLANTILLA DE DESCRIPCIÓN DEL PROCESO {
+Proceso: Proceso de gestión de reservas
+Objetivo: Gestionar reservas de canchas donde realizar actividades deportivas, teniendo en cuenta los datos del cliente, fecha, hora, sede, tipo y disponibilidad de la cancha a reservar.
+Cliente: Interesado en reservar una cancha.
+Producto: Reserva de cancha
+Proveedores:
+	- Proceso de establecimiento de tarifas y servicios ~ Tarifas y servicios
+Recursos:
+	- Encargado de Reserva
+Formularios:
+Registros:
+	- Datos del interesado
+	- Datos de reserva
+Información:
+	- Reservas
+Reglas de negocio:
+	- Si un cliente desea cancelar un turno, sólo podrá hacerlo hasta dos horas antes de su comienzo.
+}

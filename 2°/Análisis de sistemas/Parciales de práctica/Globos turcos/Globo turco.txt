@@ -1,0 +1,43 @@
+MAPA DE PROCESOS {
+
+    PROCESOS ESTRATÉGICOS {
+    	- Proceso de establecimiento de servicios y tarifas
+    	- Proceso de establecimiento de convenios con tarjetas
+    }
+
+    PROCESOS CENTRALES {
+    	- Proceso de gestión de reservas
+    	- Proceso de transporte
+    }
+
+    PROCESOS DE SOPORTE {
+    	- Proceso de mantenimiento de globos
+    	- Proceso de mantenimiento de página web
+   	- Proceso de preparación de comidas
+    	- Proceso de compra de insumos
+    }
+
+}
+
+PLANILLA DE PROCESO
+
+Proceso: Proceso de gestión de reservas
+Objetivo: Registrar reservas de viajes en globos aerostáticos, teniendo en cuenta fechas, la cantidad de pasajeros y el tipo de vuelo elegido.
+Cliente: Pasajero ~ Interesado
+Producto: Reserva
+Procesos proveedores:
+	- Proceso de establecimiento de servicios y tarifas ~ Servicios y tarifas
+	- Proceso de establecimiento de convenios con tarjetas ~ Tarjetas aceptadas
+	- Proceso de mantenimiento de página web ~ Página web en buen estado
+Formularios:
+	- Comprobante de reserva
+	- Factura
+Registros:
+	- Datos del cliente
+	- Datos de la reserva
+Información:
+	- Reserva
+Reglas de negocio:
+	- El pago de la seña equivale al 20% del precio total.
+	- Si el cliente desea reprogramar el vuelo, sólo podrá hacerlo una vez.
+	- Solamente se puede pagar con métodos de pago electrónicos.
