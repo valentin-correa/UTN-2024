@@ -33,11 +33,11 @@
 <hr>
 
 # Plantilla de proceso (1)
-![Screenshot_5](https://hackmd.io/_uploads/HyC-ILxXC.jpg)
+![Screenshot_5](./img/Screenshot_5.jpg)
 
 
 # Plantilla de proceso (2)
-![Screenshot_4](https://hackmd.io/_uploads/By5Vr8x7A.jpg)
+![Screenshot_4](./img/Screenshot_4.jpg)
 
 <hr>
 <hr>
@@ -46,5 +46,5 @@
 Faltante.
 
 # BPMN (2)
-![GrandSlamPadel](https://hackmd.io/_uploads/H1FFwPg70.svg)
+![GrandSlamPadel](./img/GrandSlamPadel.svg)
 
