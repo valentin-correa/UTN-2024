@@ -46,5 +46,5 @@
 Faltante.
 
 # BPMN (2)
-![GrandSlamPadel](./img/GrandSlamPadel.svg)
+![GrandSlamPadel](./img/GrandSlamPadel.jpg)
 
