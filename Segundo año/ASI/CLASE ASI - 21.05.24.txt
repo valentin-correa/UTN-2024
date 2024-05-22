@@ -1,0 +1,94 @@
+CLASE ASI - 21.05.24
+
+INGENIERÍA DE REQUERIMIENTOS
+
+
+Todo lo que puede tener o necesitar un software son los requerimientos.
+
+Ingeniería de requerimientos:
+- Ingeniería es construir cosas que resuelvan problemas
+- Con la ingeniería de requerimientos vamos a descubrir requerimientos y desarrollar, utilizando un proceso cooperativo (puede ser con la gerencia, mi equipo de trabajo, el cliente, algún proveedor, futuros usuarios, etc.) e iterativo (un proceso con una serie de paso que se repiten varias veces).
+
+Pasos:
+- Analizar el problema.
+- Documentar todas las observaciones que haga y construir diferentes modelos en requerimientos. Nosotros vamos a construir diagramas de UML.
+- Chequear la precisión de la comprensión obtenida. Ver si mis modelos corresponden a lo que necesita el cliente.
+
+
+Tipos de requerimientos:
+- Funcional: tiene que ver con las características de funcionalidades que tiene que tener un SI. Qué debe permitir hacer, qué datos debe registrar, que informes debe brindar, etc. Por ejemplo: un sistema que registre asistencia a clase: puedo hacer un SI donde muestro listado de curso, donde se pueda marcar asistencia. Se puede hacer de distintas formas (escáner de iris, tarjeta, lector de huellas, etc.) 
+- No funcional: Esas múltiples formas son lo no funcional.
+
+- Ejemplo: recibo de cobro. Funcional: generar y emitir el recibo. No funcional: imprimir en blanco y negro, descargarlo como pdf, entregarlo por correo, etc.
+
+- Ejemplo: Alarma. Funcional: Registrar alarma (hora y día) y emitr alarma (son dos procesos funcionales distintos). No funcional: por ejemplo, que cuando se emita la alarma se emita un sonido o vibración.
+
+Los requerimientos no funcionales también pueden apuntar a concurrencia (controlar de que no haya dos peticiones a la vez). Puede ser que mi sistema se conecte a Whatsapp, si utilizo wssp.
+
+
+Proceso de Ingeniería de requerimiento tiene 4 etapas.
+
+- Análisis de factibilidad. Se puede hacer en distintos momentos: después de la elicitación, después de la especificación o validación. Es decir, se puede hacer en cualquier momento. Por ejemplo, un viaje a Estados Unidos sin VISA no es factible.
+La factibilidad se analiza en términos económicos, técnicos y operativos. 
+Económicos: Ver si cuenta con los recursos económicos para pagar el costo de desarrollo y mantenimiento del sistema. 
+Técnicos: Ver si cuenta con toda la tecnología necesaria para el desarrollo, implementación y mantenimiento de Sistemas. 
+Operativos: Ver si cuenta con los usuarios capacitados (o se pueden capacitar) para usar el sistema.
+
+- Elicitación. Relevamiento de necesidades del cliente, descubrimos cómo son los procesos, hacemos la investigación necesaria para llevar a cabo el desarrollo del sistema. Técnicas de recolección de datos se aplican para obtener el producto de la elicitación (conjunto de requerimientos de todas las partes involucradas)
+Dominio del problema: el área o situación que tengo que analizar.
+
+los requerimientos los sacamos o del usuario o del dominio del problema.
+obtenemos listado de requerimientos. pueden ser requerimientos funcionales, pero también podemos tener procesos no funcionales.
+
+
+- Especificación. tomamos el requerimiento y decidimos a nivel funciones del SI, qué voy a hacer para registrar asistencia. El detalle de todo lo que el sistema tiene que hacer para, por ejemplo, registrar asistencia. La especificación es el detalle. Si me falta información vuelvo a la elicitación. 
+
+- Validación: Una vez tengo especificación de todos los modelos, voy a validarlos. Voy a mostrar al cliente/ usuario los modelos para obtener feedback. De la validación también se puede volver atrás: tal vez deba volver a especificar. Recordemos que es cooperativo e iterativo.
+
+Estas  4 etapas se deben realizar en dicho orden
+Esto solo es el proceso de análisis.
+
+Caso parcial: cancha de padel.
+Requerimientos funcionales que necesitamos.
+
+Requerimiento global 1. (Gestionar alquiler de canchas)
+Requerimiento detallado. Se va a llamar: Gestionar alquiler de canchas.
+Se usa gestionar y no administrar porque todo esto tiene que ver con la transacción del negocio. Cuando me refiera a personas, elementos, etc., se va a usar Administrar. En caso de transacciones del negocio, se va a llamar Gestionar.
+RD1.1 - Registrar turnos
+RD1.2 - Registrar reserva de turnos
+RD1.3 - Generar el comprobante de reserva
+RD1.4 - Consultar precio de alquiler de cancha
+RD1.5 - Registrar cobro de seña
+RD1.6 - Generar y emitir comprobante de cobro
+
+Requerimiento global 2. (Administrar clientes)
+Los siguientes se pueden englobar en un requerimiento detallado que sea: Administrar clientes. Son requerimientos globales. Es un englobamiento de una organización.
+RD2.1 - Registrar datos personales del cliente
+RD2.2 - Consultar datos del cliente
+RD2.3 - Modificar datos del cliente
+RD2.4 - Generar listado de clientes
+A este tipo de requerimientos los vamos a llamar requerimientos detallados. Son los requerimientos funcionales.
+
+Requerimiento global 3. (Administrar canchas)
+Administrar canchas:
+RD3.1 - Registrar canchas
+RD3.2 - Consultar disponibilidad de canchas
+RD3.3 - Consultar precio de alquiler de cancha
+RD3.4 - Generar listado de canchas
+RD3.5 - Modificar precio de alquiler de canchas
+
+Requerimientos no funcionales:
+-
+-
+-
+-
+-
+-
+-
+
+VER LÁMINA DE TIPOS DE REQUERIMIENTOS
+PARA CLASE QUE VIENE LEER BIBLIOGRAFÍA
+
+
+
+

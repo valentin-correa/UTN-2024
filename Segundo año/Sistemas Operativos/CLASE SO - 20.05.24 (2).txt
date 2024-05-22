@@ -1,0 +1,104 @@
+CLASE SO - 20.05.24
+
+Un proceso se ejecuta y al finalizar retorna cómo fue su ejecución
+Conceptos de status y state
+El padre es el responsable de saber el resultado de la ejecución del proceso
+La terminal (el intérprete de comandos) tiene responsabilidad sobre el resultado de las listas
+En una variable se guarda ese valor.
+El int. com. se ejecuta y, una vez termine la ejecución, guarda el resultado de esa variable.
+
+echo $? (consultar estado)
+0 (0 significa no error)
+Cuando lo que se devuelve es un valor distinto de cero, significa que hubo algún error.
+
+fork()
+Uno de los comandos mas importantes.
+Permite hacer multiprocesamiento. distribuir tareas en diferentes procesos
+La forma de generar procesos es con este comando
+Es la principal manera de generar esta jerarquía de procesos
+
+Las variables no tienen nombre, sino simplemente una dirección de memoria asignada.
+El sistema sabe dónde se encuentra la información necesaria, no su nombre.
+
+La imagen de un proceso consta de datos e instrucciones.
+Cuando se clona (copia) un proceso, lo que se copia son las variables.
+
+Cuando se ejecuta un fork() se copia el espacio de direcciones y las instrucciones. El proceso hijo va a tener las mismas instrucciones. La diferencia va a estar en que van a empezar a existir dos procesos diferentes
+
+rbp : rb pointer : (…)
+
+Al padre se le informa que PID tiene el hijo, cuando se crea un proceso.
+Si la variable pid contiene el valor 0, significa que lo que se va a ejecutar, será ejecutado por el hijo.
+
+hijo = 0
+padre > 0 (PID hijo)
+
+
+
+EXEC()
+no existe exec() solo, sino execv, execp...
+Es otra llamada al sistema
+Existen diferentes tipos: execv, execp… la diferencia es qué se espera. pero no es importante.
+Permite termina de entender el concepto de imagen de proceso.
+Hace un reemplazo de la imagen del proceso, del espacio de direcciones del proceso que conforma las direcciones y los datos.
+El exec() reemplaza la imagen de un proceso por la de otro
+cambio de imagen: se reemplaza la imagen del proceso padre que copia el fork(). Es decir, cambia la imagen del proceso hijo para que no sea la misma del proceso padre.
+
+
+El mecanismo de comunicación más común hoy en día es el de red.
+Cuando me conecto a la web se usa este tipo de comunicación, por ejemplo. Se comunica un proceso de mi dispositivo con el de otro dispositivo.
+Otros mecanismos son: tuberías, memoria compartia…
+Es importante que sepamos métodos de comunicación entre procesos.
+
+El mecanismo que vamos a ver son las tuberías, porque es el más fácil de entender e implementar.
+
+
+
+
+
+
+SISTEMAS DE ARCHIVOS
+
+¿Qué es?: Cómo trata y estructura el SO la información para poder estructurar(verificar) archivos.
+El proceso de formateo lo que hace es asignar el SA.
+¿Cómo un proceso va a escribir un archivo? Va a utilizar llamada al sistema para hacerlo, ya que el proceso en sí no hace nada. Requiere de dos llamadas al sistema: abrir un archivo y escribir en él.
+Mediante la apertura se verifican los permisos, las existencias, etc.
+Cuando se abre el archivo retorna un fd (descriptor de archivos), que es un número independiente para cada proceso. Le permite saber al SO cuantos archivos abiertos tiene cada proceso.
+Hay limitaciones a nivel de SO para cuántos archivos puede abrir un proceso. También, por ejemplo, cuanto tiempo se puede ejecutar o cuanta memoria puede consumir.
+Ese fd va a ser el identificador del proceso para realizar las llamadas al sistema (operaciones)
+El fd sería como una especie de puntero.
+Por defecto, cuando se crea un proceso se abre de forma automática 3 fd, el fd0, fd1 y fd2. Apuntan a una entrada y dos salidas.
+
+____________________
+|FD | Descripción  |
+|------------------|  La funcionalidad de cada fd no varía, es siempre la misma. es decir, el 0 siempre va a ser para entrad y así.
+|0  | Entrada      |  (Entrada por teclado)
+|1  | Salida       |  (salida de pantalla)
+|2  | Salida error |  (=)
+____________________
+
+Se pueden redirigir las salidas hacia archivos. Las redirecciones que yo puedo hacer de la terminal siempre son hacia archivos.
+
+
+
+TUBERIAS (Signo: |)
+
+La tubería, se le llama así, porque la forma de verlo es como una tubería.
+cat y grep son dos procesos.
+la tubería es la conexión entre dos procesos
+a cat va a alterar la salida y a grep le va a alterar su entrada
+cat muestra todos los usuarios del sistema
+cat /etc/passwd | grep bash       : filtra todas las salidas que tienen bash (verificar)
+la salida apunta a la tubería, no al grep (cat -> tubería -> grep)
+
+
+PROCESO ZOMBI
+en Linux el proceso zombi es cuando el proceso padre muere antes que se ejecute el hijo
+el proceso que se hace cargo es el raíz, por lo general
+la única forma en que un proceso termine es retornando el resultado al proceso padre
+el proceso está terminado pero no puede cerrarse porque el proceso padre no le recibe el resultado, entonces queda bloqueado
+
+
+
+
+
