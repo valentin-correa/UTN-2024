@@ -106,4 +106,18 @@ Es importante reflexionar sobre cuán detallada será la especificación de requ
   > **Según PMBOK**, la agrupación de los miembros del equipo en el mismo espacio físico mejora su capacidad de rendimiento. Promueve la comunicación frente a frente, eliminando mucho detalle en la especificación.
 - Casos de prueba basados en requisitos
   - Tanto el analista de pruebas como el ingeniero de requisitos usan la misma fuente de información, sólo que, si bien el primero prepara los casos de prueba, el segundo elabora la especificación de requisitos. No hay un orden de precedencia entre los dos trabajos.
-  - 
+  - Cuando la especificación de requisitos es la materia prima para que el equipo de pruebas prepare los casos de prueba, ciertamente hay más necesidad de detalle en la especificación.
+- Grado de incertidumbre de las estimaciones
+  - Toda la estimación implica un grado de incertidumbre por definición. Esta se relaciona directamente con el grado de madurez y estabilidad de requisitos. La madurez se refiere a la relación entre las decisiones tomadas y las decisiones pendientes sobre los requisitos de la solución, la estabilidad se refiere a la probabilidad de que se produzcan cambios en los requisitos ya definidos.
+  - Cuanto más temprano se necesita una estimación, menores las posibilidades que los requisitos sean maduros o estables.
+- Trazabilidad de los requisitos
+  - Algunos tipos de proyectos requieren un alto grado de evidencia que relacionan requisitos entre sí y artefactos de otras disciplinas. En estos casos, existe la necesidad para que los requisitos sean más detallados.
+- Involucramiento de los clientes
+  - El grado de implicación de los clientes en el proyecto es fundamental para su éxito y también influye en el nivel de detalle. Todo esto favorece a que no sea necesaria una especificación tan detallada.
+- Conocimiento del equipo en el dominio del proyecto
+  - Cuando el equipo tiene experiencia en otros proyectos del negocio del cliente, los detalles no son tan necesarios para especificarse. Lo que no puede ocurrir es el equipo pensar que ya tiene toda la información y la solución para el cliente sin antes escuchar cuidadosamente acerca de sus necesidades.
+  - **En el desarrollo interno**, es común que el mismo equipo ejecute varios proyectos para una misma área de negocio.
+  - **En el desarrollo externo**, hay proveedores que trabajan exclusivamente con proyectos en áreas muy específicas.
+- Trabajo con características similares a anteriores
+~~~~~~~~~~~
+
