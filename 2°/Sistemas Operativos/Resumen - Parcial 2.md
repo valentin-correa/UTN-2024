@@ -258,5 +258,16 @@ Extensiones (.pdf)
   - Subdirectorios que permiten organizar los archivos. Casi todos los sistemas de archivos modernos utilizan esta estructura.
   - ![Subdirectorio](src/image-12.png)
 
+### Rutas
+- Nombres
+  - Windows \usr\ast\mailbox **(\\)**
+  - UNIX /usr/ast/mailbox **(//)**
+  - MULTICS >usr>ast>mailbox **(>>)**
+
+- Tipos de rutas
+  - **Absoluta:** Comienza en el directorio raíz.
+  - **Relativa:** Comienza en el directorio actual (o directorio de trabajo).
+
+
 ## Punto de vista del sistema operativo acerca del sistema de archivos
 > Implementación, listas enlazadas, mapa de bits, etc.
