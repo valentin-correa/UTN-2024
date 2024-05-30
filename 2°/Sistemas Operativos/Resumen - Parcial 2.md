@@ -222,12 +222,14 @@ Extensiones (.pdf)
 
 ### Estructura
 1. Secuencia de bytes sin estructura. Mayor flexibilidad. Al sistema operativo no le interesa que hay dentro del archivo. Metodología utilizada por UNIX y Windows.
+
 ![Sin estructura](src/image-8.png)
 
-2. Secuencia de registros. Cada archivo es una secuencia de registros de longitud fija. Cada registro tiene una estructura interna. Buscaba que la operación de lectura devuelva un registro y la operación de escritura sobreescriba o agregue un registro.
+1. Secuencia de registros. Cada archivo es una secuencia de registros de longitud fija. Cada registro tiene una estructura interna. Buscaba que la operación de lectura devuelva un registro y la operación de escritura sobreescriba o agregue un registro.
+
 ![Registros](src/image-9.png)
 
-3. Árbol de registros. No necesariamente todos tienen la misma longitud. Cada registro tiene un campo **llave**. Se ordena en base al campo **llave**. Utilizado en computadoras mainframe.
+1. Árbol de registros. No necesariamente todos tienen la misma longitud. Cada registro tiene un campo **llave**. Se ordena en base al campo **llave**. Utilizado en computadoras mainframe.
 
 ### Tipos de archivos
 - Regulares: Contienen información del usuario. ASCII o Binario.
@@ -236,6 +238,7 @@ Extensiones (.pdf)
 - Archivos especiales de bloque: Modelan discos.
 
 ![Exe - Bin](src/image-10.png)
+
 **Número mágico:** Identifica al archivo como ejecutable.
 
 ### Acceso a archivos
@@ -250,10 +253,10 @@ Extensiones (.pdf)
 - Sistemas de directorios de un solo nivel
   - Directorio que contenga a todos los otros (directorio raíz).
   - Simple y localiza rápidamente los archivos.
-  ![Raíz](src/image-11.png)
+  - ![Raíz](src/image-11.png)
 - Sistemas de directorios jerárquicos
   - Subdirectorios que permiten organizar los archivos. Casi todos los sistemas de archivos modernos utilizan esta estructura.
-  ![Subdirectorio](src/image-12.png)
+  - ![Subdirectorio](src/image-12.png)
 
 ## Punto de vista del sistema operativo acerca del sistema de archivos
 > Implementación, listas enlazadas, mapa de bits, etc.
