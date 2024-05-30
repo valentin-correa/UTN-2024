@@ -178,5 +178,6 @@ Pequeño dispositivo de hardware que asocia direcciones virtuales a direcciones 
 - No es necesario que todos los segmentos de todos los programas tengan la misma longitud.
 - Existe una longitud máxima para cada segmento.
 - Una dirección lógica segmentada consta de dos partes, un número de segmento y un desplazamiento.
-- La segmentación es similar a la partición dinámica como consecuencia del empleeo de segmentos de diferentes tamaños.
-- ![Consideraciones](src/image-7.png)
+- La segmentación es similar a la partición dinámica como consecuencia del empleo de segmentos de diferentes tamaños.
+
+![Consideraciones](src/image-7.png)
