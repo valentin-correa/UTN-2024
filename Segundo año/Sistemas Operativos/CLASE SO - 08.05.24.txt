@@ -1,0 +1,105 @@
+CLASE SO - 08.05.24
+
+Descriptor de archivos: el puntero que te devuelve la llamada al sistema para interactuar con (...)
+variable que te devuelve la llamada al sistema para apuntar al archivo
+variable compartida entre un padre y un hijo
+fd = file descriptor = descriptor de archivos
+
+
+ADMINISTRACIÓN DE MEMORIA----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Con una abstracción de memoria podes tener más archivos en la memoria (verificar)
+Eso lo administra el SO
+
+Sin abstracción de memoria no había multiprogramación. Se veía la memoria física desde el programa, como veíamos en AdC el año pasado.
+
+Para saber qué espacios tenemos disponibles en memoria principal, el SO lleva un registro.
+Las dos estrategias que se utilizan son:
+	-Mapa de bits
+	-Listas Enlazadas
+Las fragmentaciones son incómodas y requieren procesamiento.
+
+Estrategias para listas enlazadas:
+	-Primer ajuste (desde el principio)
+	-Siguiente ajuste (continúa del punto anterior)
+	-Mejor ajuste (el hueco que mejor se ajusta) (busca la cantidad de espacios libres más cercana a la que se necesita)
+	-Peor ajuste (el hueco más grande posible)
+Una alternativa es tener dos listas separadas. Una para los huecos y otra procesos.
+
+Memoria virtual:
+Todas las referencias a la memoria se traducirán dinámicamente a direcciones físicas durante la ejecución:
+	Un proceso puede cargarse y descargarse de la memoria principal de tal forma que ocupe regiones diferentes.
+Un proceso puede dividirse en varias partes y no es necesario que estas partes se encuentren contiguas en la memoria principal durante la ejecución:
+	No será necesario que todas las páginas o todos los segmentos de un proceso estén en la memoria durante la ejecución.
+	Es decir, va a estar en memoria la parte que necesito que se ejecute.
+
+El SO comienza trayendo sólo unos pocos fragmentos del programa.
+El conjunto residente es la parte de un proceso que está realmente en la memoria principal. Cuando un proceso que está en memoria quiere ejecutar un proceso de una direccion virtual (que está en memoria virtual) tenemos un fallo de página.
+Si el procesador encuentra una dirección lógica que no está en la memoria principal, genera una interrupción que indica un fallo de acceso a la memoria (de página).
+El SO pone al proceso interrumpido en estado Bloqueado.
+El SO necesita traer a la mem principal el fragmento del proceso que contiene la dirección lógica que provocó el fallo de acceso:
+	-El SO emite una solicitud de Lectura de E/S al disco.
+	-El SO puede expedir otro proceso para que se ejecute mientras realiza la operación de E/S
+Una vez que el fragmento deseado se ha traído a la memoria principal y se ha emitido la interrupción de E/S, se devuelve el control al SO, que coloca el proceso afectado en el estado de Listo.
+
+Lo que se divide en partes (página) es el proceso, no el programa.
+Marco de página -> cuando está en memoria
+Páginas virtuales -> cuando está en disco
+
+Es posible que un proceso sea más grande que toda la memoria principal.
+Hiperpaginación: El SO expulsa un fragmento de un proceso justo antes de ser usado. El procesador consume más tiempo intercambiando fragmento que ejecutando instrucciones de usuario.
+
+Cuando se ejecuta el fork se crea el BCP (Bloque de control de procesos)
+
+El SO tiene una dos tablas, una de los procesos en memoria principal (física) y otro con los de memoria virtual.
+El SO busca los procesos de memoria virtual y se fija si hay espacio en la memoria principal para ejecutarlos. Si hay, los pone ahi. 
+Existe la tabla de páginas, donde se indican los procesos, si tienen espacio en la memoria principal (marco de página) y dónde se encuentra en caso de tener espacio.
+
+La asociación de una dirección virtual a una dirección física debe ser rápida.
+Si el espacio de direcciones virtuales es grande, la tabla de páginas es grande.
+
+Algoritmo de reemplazo de páginas óptimo sería eliminar el (proceso) que no se utilizará (será referenciado) en mucho tiempo. Pero es algo difícil de calcular o saber.
+Referenciada significa que se usó.
+Clase 0 es la más óptima de eliminar. Luego le siguen clase 1 y clase 2. (ver clases) (son clase 0, 1, 2 y 3)
+Algoritmo de reemplazo de páginas: segunda oportunidad. Se elimina la página más vieja que no ha sido referenciada.
+Algoritmo de reemplazo de páginas: reloj.
+Menos utilizada recientemenete: descartar la página que menos se utiliza en el tiempo. Contador de referencia a la página, se elimina la menor.
+
+Cuestiones de diseño para los sitemas de paginación. (MAYUSCULAS)
+A medida que aumentan los marcos de página, tengo menor cantidad de fallos de página. Y viceversa.
+
+SEGMENTACIÓN:
+No es necesario que todos los segmentos de todos los programas tengan la misma longitud. Esto requiere más trabajo pero puede ser más eficiente. Es decir, las partes de los procesos en memoria virtual pueden tener longitud dinámica.
+Esto puede causar fragmentación.
+
+
+ADMINISTRACIÓN DEL SISTEMA DE ARCHIVOS---------------------------------------------------------------------------------------------------------------------------------
+
+Los sistemas de archivos se crean cuando se formatean.
+Es la forma de cómo está ordenada y cómo se accede a la información dentro de una memoria secundaria.
+La partición es un conjunto de bloques
+Nodos son estructuras de bloques que contienen información sobre...
+
+El SO debe mantener un registro acerca de qué bloques de disco van con cuál archivo
+
+Nodos-i
+Especie de raid, una lista de datos.
+Estructura de datos que lista los atributos y las direcciones de disco de los bloques del archivo.
+Solo está en memoria cuando el archivo está abierto
+Un problema con los nodos-i es que si cada uno tiene espacio para un número fijo de direcciones de disco
+Hay un nodo-i por cada archivo
+
+Hay un sistema de archivos por cada partición. No puede haber dos sist de archivos en una partición.
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,128 @@
+CLASE SO - 27.05.24
+
+PRESENTACIÓN SISTEMA DE ARCHIVOS 1------------------------------------------------------------------------------------------------------------------------------------
+
+Una de las funcionalidades del kernel es administrar como se borra, accede, abre, administra, etc., la información.
+
+NFS, NFTS (SA de Windows)
+EXT3, EXT4 (SA de Linux)
+RAISERTS
+
+El SA se crea dentro de las particiones
+
+En la RAM no tenemos un espacio muy grande para poder guardar en relación a la memoria secundaria.
+tamaño, persistencia y concurrencia es lo que permite resolver el SA
+
+Los archivos son unidades lógicas de información creada por los procesos.
+Los archivos no suelen ocupar espacios contiguos (juntos) de memoria. El SA sabe dónde está cada uno y poder acceder al mismo.
+
+La nomenclatura es cómo se nombran los archivos
+Las extensiones identifican el tipo de archivo. Son sugerencias de cómo se deben abrir los mismos.
+
+Tipos de archivos.
+Regulares: son los de usuario. Pueden ser binarios o de ASCII
+Directorios: Son sistemas de archivos para mantener la estructura del sistema de archivos
+Especiales de caracteres: modelan dispositivos de E/S ej. (/dev/mice) es el mouse
+Especiales de bloques: modelan discos ej. (/dev/sda1) un bloque
+
+El SA de acuerdo a los datos sabe si puede ejecutar o no un archivo
+
+El tipo de acceso puede ser secuencial o aleatorio.
+Secuencial va en orden desde el principio. Ej. cintas magnéticas
+Aleatorio: read, seek. Ej. base de datos
+
+Hay dos formas de guardar
+Asignación contigua (la lectura podría llegar a ser secuencial)
+Asignación aleatoria (tenes que pasar por todo)
+
+Atributos o metadatos:
+los atributos son los datos de los datos
+Dentro de la estructura de archivos hay varias banderas que identifican que tipo de archivo es, si está oculto, protegido, cuando se creó, si es binario o ASCII, el tamaño, etc.
+Acceso random es que el SA debe saber cuales son los bloques de un archivo. Esto porque el disco está fragmentado y el archivo tiene asignación aleatoria.
+
+Las operaciones con archivos son llamadas al sistema.
+para poder trabajar con archivos necesitamos llamadas al sistema
+
+Las operaciones con directorios son similares a las de los archivos.
+
+
+PRESENTACIÓN SISTEMA DE ARCHIVOS 2----------------------------------------------------------------------------------------------------------------------
+
+i-nodos
+lo más importante que tienen las particiones de disco
+
+lo importante es saber qué partes de disco van con cada archivo.
+es probable que el archivo tenga asignación aleatoria.
+
+siempre que creas un SA estableces el tamaño de bloques
+el tamaño de los bloques no va a variar. es decir, siempre van a ser iguales
+
+métodos:
+- asignación contigua (con una sola operación puedo guardar topo en una sola operación) (puede llegar a haber fragmentación, se van generando huecos a medida que se van guardando)(es mas útil en un DVD porque se sabe que los archivos no van a cambiar de tamaño) (contiguo significa que todos los archivos de A se van a guardar uno al lado del otro)
+- lista ligada o enlazada (más procesamiento, es más lento) 
+- asignación de lista enlazada utilizando una tabla en memoria (fat, file allocation able) (no escala bien en discos grandes) (la tabla está en memoria principal)
+- nodos-i: son estructuras de datos que lista los atributos y las direcciones de disco de los bloques del archivo. si tuviera el i-nodo puedo abrir los bloques. Solo está en memoria cuando el archivo está abierto. Un problema con los nodos-i es que cada uno tiene espacio para un número fijo de direcciones de disco. si la cantidad de direcciones supera el tamaño fijo, en el último se pone un puntero a otro i-nodo. el acceso es aleatorio, dado que se trata de listas.
+
+Implementación de directorios:
+- El SO utiliza el nombre de la ruta suministrado por el usuario para localizar la entrada de directorio. Esta entrada provee la información necesaria para encontrar los bloques de disco.
+
+Formas de manejar nombres de archivos largos en un directorio: en línea o en un heap
+
+Puede ser que dos archivos tengan el mismo i-nodo y apunten a un bloque inicial. a través de diferentes directorios pueden acceder al mismo bloque.
+
+Si borro el archivo borro el enlace, no el i-nodo
+Cuando borro un archivo, borro la referencia a los i-nodos. los i-nodos pasan a ser bloques libres.
+Los i-nodos se crean cuando se crean los archivos
+
+para remover un archivo
+1. se quita un archivo de su directorio
+2. Se libera el nodo-i y pasa a la reserva de nodos-i libres
+3. devolver todos los bloques de disco a la reserva de bloques de discos libres
+
+si el tamaño de un bloque es muy grande se desperdicia espacio, es probable que haya fragmentación
+si el tamaño es muy chico, se desperdicia tiempo
+
+el registro de bloques libres también lo puedo hacer con mapas de bits o con lista enlazada de bloques libres
+
+quota de disco: el limite en espacio que puede crecer un determinado directorio
+por ejemplo, en Gmail te dan 15gb por defecto.
+se asignan por proceso o por usuario
+
+respaldo del sistema de archivos (incremental, full o diferencial) (copias de seguridad - backups) 
+(full: copia de toda la info. desventaja: tiempo y espacio que ocupa) 
+(incremental: se copia solo los archivos que se modificaron a partir del full. ventaja es que los backups son muy chiquitos) (el lunes se guarda el A. el martes se guarda el B. no es acumulativo)
+(diferencial: se graba el A el lunes. el martes se graba el A y el B. Si el miércoles se modifica el A, se guarda el B y el A modificado. es acumulativo) es un diferencial por archivo. son sistemas cliente-servidor. 
+
+consistencia del SA:
+fsck
+scandisk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

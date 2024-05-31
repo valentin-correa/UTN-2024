@@ -1,0 +1,87 @@
+CLASE ASI - 28.05.24
+
+Gestionar: transacciones de algo específico
+-Gestionar ventas
+	Registrar venta
+	consultar deudas de clientes
+	emitir listado de productos más vendidos
+	(Todo relacionado a transacciones)
+-Gestionar alquiler
+-Gestionar atención médica
+Es un requerimiento global
+
+Administrar: ABM (alta baja modificación) de objetos comunes
+Todo aquello que debe existir al momento 0 antes de que el sistema se empiece a usar.
+Por ej. si vendo productos los tengo que registrar antes de venderlos
+ADMINISTRAR PRODUCTOS
+-Registrar productos
+-modificar productos
+-actualizar precio
+-consultar productos
+-emitir listado de productos y precios
+ADMINISTRAR EMPLEADOS
+-Registrar empleado
+-Emitir listado de empleados
+
+Aspectos importantes:
+-Qué son los requerimientos
+-Tipos de requerimientos
+-Que tan detallada tiene que ser la descripción de los requisitos (ej. registrar venta se puede describir mucho más)
+
+
+Product owner: Persona designada por el cliente para explicar las necesidades y/o validar y/o priorizar los requerimientos, entre otras cosas (verificar)
+Cuando no tenemos contacto con el cliente o usuarios finales, hay que buscar información por otras fuentes
+
+ 
+Casos de uso: porciones de funcionalidades del sistema
+
+Para ver en mayor detalle lo q hace un requerimiento (acciones, actividades, pasos que hace el SI) lo voy a especificar en una plantilla donde voy a modelar cada una d esas funcionalidades en todo lo q tengo que hacer.
+
+Diagrama de clases es un grafico de UML. Todos los objetos relevantes (amigo, por ejemplo, en el ejemplo del administrar amigos) del dominio del problema. Lo que se hace es representar las estructuras de datos que tiene que manejar el sistema. Van a servir para ampliar el detalle de los requerimientos funcionales.
+Nos va a servir en la etapa de especificación de requerimientos.
+
+Las cuatro etapas:
+-Análisis de factibilidad (presente en las siguientes tres etapas)
+-Elicitación de requerimientos (escribo)
+-Especificación de requerimientos (especifico)
+-Validación (con el cliente)
+Producto: Requerimientos listos para construir, desarrollar. A los desarrolladores le voy a pasar toda la información que haya creado. Al cliente le voy a mostrar documentación de los requerimientos pero menos técnica. 
+
+Como analista funcional tengo que saber qué documentación le voy a entregar a quien.
+Si le entrego al analista de desarrollo tengo como objetivo guiarlos, indicarles que tienen que construir.
+Con los tester tendría que hacer incapié en las reglas de negocio, en la calidad del software.
+Analista desarrolla los modelos: pueden ser gráficos o escritos.
+Un buen desarrollador lee toda la especificación y tiene análisis crítico (ayuda al analista a ampliar esa especificación)
+QA (analista de calidad, tester) trata de encontrar los errores del sistema y romperlo.
+
+Si algo en la validación falta o está erróneo, vuelvo a especificar, es decir, corrijo las especificaciones.
+Es un proceso iterativo e incremental. Voy repitiendo los pasos y aumentando los requerimientos que voy captando.
+
+
+
+TPI
+
+REQUERIMIENTO NO FUNCIONAL
+Opciones:
+En el sistema incluyo el registro de turnos
+Turnos tiene su propio sistema. mi sistema tiene que conectarse con el otro
+Los sistemas no van a tener conexiones pero alguien debe hacer una conexión manual, capturando datos de uno y guardándolos en el otro.
+
+
+requerimientos globales son formas de organizar los requerimientos globales.
+los requerimientos detallados son los requerimientos funcionales. por ej. registrar turno de inspección técnica vehicular
+los administrar los voy a utilizar como ABMC (alta baja modificación y consulta) de soporte. Que sea de soporte significa todo lo necesario al momento 0 en que empiezan a ocurrir las transacciones. Por ej. si tengo gestionar cobros para saber cuanto tengo que cobrar necesito tener registradas las tarifas antes, entonces voy a tener un administrar tarifas como global. como detallado voy a tener registrar tarifa servicio, modificar tarifa servicio, emitir listado tarifas servicio
+obleas se pueden registrar
+los administrar pueden estar relacionados con los insumos del sistema o los datos que hay que saber antes de que empiecen las transacciones, o datos que necesitas más allá de que se realicen o no las transacciones. por ej. necesito un administrar empleados, tmb puedo tener un administrar turnos de atención de empleados (si tienen turnos)
+podes tener un administrar precios de servicios y ahí manejas los precios y los descuentos
+
+en el tpi ponemos cada global y detallado
+
+cuando se consultan los datos de los clientes se pone un registrar
+mapear los requisitos es hacer la elicitación: listar cuales van a ser los requisitos
+todo el mundo tiene que entender a que se refiere, por eso hay q detallarlos más
+
+documento de especificación de requerimientos (ers) (estándar IEEE, de calidad)
+
+traer hecho análisis de requerimientos del capitulo
+empezamos nueva unidad la clase que viene: modelado d objetos (creo)

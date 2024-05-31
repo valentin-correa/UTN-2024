@@ -1,0 +1,70 @@
+CLASE SO - 29.05.24
+
+Práctico de Exec y Fork
+
+Para compilar:
+gcc -o [nombre] ejer1.c
+./nombre
+
+Instalar compilador (como root)
+apt install build-essential
+
+ver cuantos procesos hay y cuantas salidas muestra el código
+
+ejer1.c
+
+Salidas: 6 salidas
+Procesos: 4 procesos. 
+En primera instancia, un proceso crea otro proceso, ambos printean "Hola mundo" y pasan a tener contador 1.
+En segunda instancia, cada uno crea un proceso (es decir, se crean dos) y se ejecutan todos desde el contador 1. Luego, todos tendrán contador 2.
+
+
+ejer2.c
+
+Salidas: 5
+Procesos: 5
+El proceso padre crea un hijo. Como su PID va a ser el ID del hijo, va a ser mayor a 0, va a salir del ciclo y va a printear "hola mundo". Como el PID del hijo va a ser 0, se mantiene en el ciclo creando otro hijo y sale para printear "hola mundo". Así hasta llegar a los 5 procesos.
+
+
+ejer3.c
+
+Salidas: 4
+Procesos: 4
+En pid_t p=fork() un proceso va a crear otro. El padre va a tener p>0 y el hijo p=0
+En p=fork(), ambos procesos van a crear otro proceso, entonces tendremos 4 procesos. Los dos recién creados van a tener p=0 y los dos que fueron padres van a tener p>0
+Por lo tanto, los dos que fueron padres van a tener la salida "La suma es 22" y los dos que se crearon en la segunda línea van a entrar al condicional y su salida será "La suma es 19"
+
+
+ejer4.c
+
+Salidas: 2
+Procesos: 2
+en c=fork() se crea un proceso. van a haber dos
+en pid_t p = getpid() el proceso recibe su id actual
+como su id nunca puede ser 0, nunca entrará al condicional.
+Por lo tanto, los dos procesos existentes imprimirán "Final!"
+
+
+ejer5.c
+
+Salidas: 7
+Procesos: 6
+El único proceso existente recibe su PID
+Ese proceso crea otro proceso. Van a haber dos procesos.
+El hijo va a ejecutar el condicional, imprimir "Hola mundo!" y crear otro proceso.
+Van a haber tres procesos.
+Como la línea fork() no tiene condicional, todos los procesos van a crear un proceso. Habrán 6 procesos.
+Los 6 procesos tendrán p=0 porque, al no haber condicional, ejecutan esa línea.
+Todos ejecutan el condicional e imprimirán "Cuantas veces?" un total de 6 veces.
+
+Notas
+fork() va a devolver 0 para el hijo (no es el pid) y un número mayor a 0 para el padre (pid del hijo)
+con getpid() obtenes el id del proceso actual, nunca va a ser 0
+pid_t y int es lo mismo
+que una variable se llame pid no significa que lo tenga. importa lo que se obtiene, lo que pone el programador. una variable y un pid no es lo mismo.
+una variable a nivel computadora es un espacio de memoria
+
+si no hay igualación el PID siempre va a valer lo que hereda el padre, es decir copia el valor del PID del padre (en este caso, del ejercicio 5, habría 4 p=0)
+Si hay asignación se copia el valor PID del padre en el hijo y se asigna al padre el PID del hijo (en este caso, del ejercicio 5, habría 3 p=0)
+
+
