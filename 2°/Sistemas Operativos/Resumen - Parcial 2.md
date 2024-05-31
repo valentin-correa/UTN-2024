@@ -182,7 +182,6 @@ Pequeño dispositivo de hardware que asocia direcciones virtuales a direcciones 
 
 ![Consideraciones](src/image-7.png)
 
-
 <hr>
 
 <hr>
@@ -190,11 +189,13 @@ Pequeño dispositivo de hardware que asocia direcciones virtuales a direcciones 
 # Sistema de archivo
 
 ## Archivo
+
 Unidades lógicas de información creada por los procesos. Estructuran, denominan, abren, utilizan, protegen, implementan y administran.
 
 La parte del sistema operativo que trata con ellos es el **sistema de archivos**.
 
 ## Problemáticas
+
 - Espacio de direcciones limitado
 - Persistencia (que la información no sea volátil)
 - Concurrencia (que varios procesos accedan a partes de la información al mismo tiempo)
@@ -204,9 +205,11 @@ La parte del sistema operativo que trata con ellos es el **sistema de archivos**
 > 3. Múltiples procesos deben ser capaces de acceder a la información concurrentemente.
 
 ## Punto de vista del usuario acerca del sistema de archivos
+
 > El aspecto más importante es la apariencia: qué constituye un archivo, cómo se denominan y protegen los archivos, qué operaciones se permiten entre ellos, etc.
 
 ### Nomenclatura
+
 Muchos sistemas de archivos admiten nombres de hasta 255 caracteres.
 
 UNIX
@@ -216,11 +219,13 @@ MS-DOS (Windows)
 : Case insensitive. Es el mismo archivo.
 
 Extensiones (.pdf)
+
 - MS-DOS: Nombre [1-8 caracteres], Extensión (opcional) [1-3 caracteres]
 
 - UNIX: Tamaño de extensión **libre**. Un archivo puede tener 2 o más extensiones.
 
 ### Estructura
+
 1. Secuencia de bytes sin estructura. Mayor flexibilidad. Al sistema operativo no le interesa que hay dentro del archivo. Metodología utilizada por UNIX y Windows.
 
 ![Sin estructura](src/image-8.png)
@@ -232,6 +237,7 @@ Extensiones (.pdf)
 1. Árbol de registros. No necesariamente todos tienen la misma longitud. Cada registro tiene un campo **llave**. Se ordena en base al campo **llave**. Utilizado en computadoras mainframe.
 
 ### Tipos de archivos
+
 - Regulares: Contienen información del usuario. ASCII o Binario.
 - Directorios: Sistemas de archivos que mantienen la estructura del sistema de archivo.
 - Archivos especiales de caracteres: Modelan dispositivos de E/S.
@@ -242,14 +248,17 @@ Extensiones (.pdf)
 **Número mágico:** Identifica al archivo como ejecutable.
 
 ### Acceso a archivos
-- **Secuencial:** Proceso puede leer todos los bytes o registros de un archivo en orden, empezando desde el principio. No puede saltear algunos o leerlos en un orden diferente. Se puede rebobinar. Convenientes en cintas magnéticas.	
 
-- **Aleatorio:** Se pueden leer los bytes o registros de un archivo fuera de orden. Accede a través de llaves y no de posiciones. Requerido por muchas aplicaciones. 
+- **Secuencial:** Proceso puede leer todos los bytes o registros de un archivo en orden, empezando desde el principio. No puede saltear algunos o leerlos en un orden diferente. Se puede rebobinar. Convenientes en cintas magnéticas.
+
+- **Aleatorio:** Se pueden leer los bytes o registros de un archivo fuera de orden. Accede a través de llaves y no de posiciones. Requerido por muchas aplicaciones.
 
 ### Atributos de archivos (o metadatos)
+
 > Protección, contraseña, owner, fechas, tamaño, etc.
 
 ### Directorios
+
 - Sistemas de directorios de un solo nivel
   - Directorio que contenga a todos los otros (directorio raíz).
   - Simple y localiza rápidamente los archivos.
@@ -259,8 +268,10 @@ Extensiones (.pdf)
   - ![Subdirectorio](src/image-12.png)
 
 ### Rutas
+
 - Nombres
-  - Windows \usr\ast\mailbox **(\\)**
+
+  - Windows \usr\ast\mailbox **(\\\\)**
   - UNIX /usr/ast/mailbox **(//)**
   - MULTICS >usr>ast>mailbox **(>>)**
 
@@ -268,6 +279,112 @@ Extensiones (.pdf)
   - **Absoluta:** Comienza en el directorio raíz.
   - **Relativa:** Comienza en el directorio actual (o directorio de trabajo).
 
-
 ## Punto de vista del sistema operativo acerca del sistema de archivos
+
 > Implementación, listas enlazadas, mapa de bits, etc.
+
+- Cómo se almacenan los archivos y directorios
+- Cómo se administra el espacio en disco
+- Entorno de eficiencia y confiabilidad
+
+### Distribución del sistema de archivos
+- Se almacenan en discos. Son independientes por partición.
+- El **MBR** está en el sector 0 del disco. Utilizado para arrancar la computadora. Contiene la tabla de particiones al final.
+![Distribución del FS](src/image-13.png)
+
+### Implementación de archivos
+¿Cómo mantener un registro acerca de qué bloques de disco van con cúal archivo?
+
+- **Métodos**
+  - Asignación contigua
+    - Almacena cada archivo como una serie contigua de bloques de disco.
+    - **Ventajas:** 
+      - Fácil de implementar. Sólo necesita conocer el bloque inicial y la longitud.
+      - El rendimiento de lectura es excelente. Se puede leer el archivo completo en una sola operación.
+    - **Desventajas:**
+      - Genera fragmentación.
+      - No se conocen los tamaños de los archivos de antemano.
+    - En el caso de los CD y DVD, los tamaños de los archivos se conocen de antemano.
+  
+  - Lista enlazada
+    - La primer parte de cada bloque apunta al bloque siguiente. El resto es para datos.
+    - Sin fragmentación excepto el último bloque.
+    - Lento. Debido a que para acceder a un bloque $n$, se deben leer los $n-1$ anteriores.
+
+  - Lista enlazada usando una tabla en memoria (FAT)
+    - Lista enlazada en memoria que tiene un puntero a cada bloque de disco. Cada bloque de disco tiene un puntero al siguiente bloque.
+    - No escala bien en discos grandes.
+
+  - Nodos-i
+    - Cada archivo tiene un nodo-i. Contiene los atributos del archivo y las direcciones a los bloques de disco del mismo.
+    - Sólo está en memoria cuando el archivo está abierto.
+    - ¿Qué pasa si un archivo crece más allá de su límite? Reserva el último bloque de disco no para datos, si no para punteros a bloques de disco.
+    - ![](src/2024-05-31-16-56-45.png)
+
+### Implementación de directorios
+El sistema operativo utiliza el nombre de la ruta suministrado por el usuario para localizar la entrada de directorio. Esta entrada provee la información necesaria para encontrar los bloques de disco.
+
+Puede ser:
+- Dirección de disco de todo el archivo {Asignación continua}.
+- Dirección de disco del primer bloque {Listas enlazadas}.
+- Número de nodo-i.
+
+**¿Dónde almacenar los atributos?**
+- En la entrada de directorio. ![](src/2024-05-31-18-53-50.png)
+- Directorio en el que cada entrada hace referencia a un nodo i ![](src/2024-05-31-18-56-06.png)
+
+
+**¿Cómo manejar nombres de archivos largos?**
+![](src/2024-05-31-19-00-38.png)
+
+El primero es una cagada porque las partes sombreadas ocupan espacio en disco.
+
+### Archivos compartidos
+Usa enlaces para referirse a un archivo desde varios directorios. Se pueden implementar de dos formas:
+- Los bloques de disco referidos al archivo no se lista en los directorios, sino a través de un nodo-i.
+- Enlaces simbólicos. ![](src/2024-05-31-19-09-12.png)
+
+### Sistema de archivos por bitácoras (NTFS, ext3, jfs)
+- Mantiene un registro de lo que va a hacer el sistema de archivos antes de hacerlo. Si algo falla, se puede recuperar. (*Journaling file system ~ JFS*)
+
+- Las operaciones a realizar deben ser **idempotentes `deben poder repetirse las veces necesarias`**
+
+- Un sistema de archivos puede también hacer **transacciones atómicas**.
+
+### Administración y optimización de sistemas de archivos
+
+#### Administración del espacio en disco
+¿Cómo almacenar un archivo de $n$ bytes? Alternativas:
+- Asignar $n$ bytes consecutivos de espacio en disco.
+- Dividir el archivo en bloques *no necesariamente* contiguos.
+
+#### Tamaño de bloque
+- Si es muy grande, se desperdicia espacio.
+- Si es muy pequeño, se desperdicia tiempo.
+- Por lo general, se utilizan bloques de 4KB.
+
+#### Registro de bloques libres
+¿Cómo llevar registro de los bloques libres? Alternativas:
+- Lista enlazada
+  - Cada bloque de disco tiene un puntero al siguiente bloque libre.
+- Mapa de bits
+  - Cada bloque de disco tiene un bit asociado que indica si está libre o no.
+
+#### Cuotas de disco
+- Limitar la cantidad de espacio que un usuario puede utilizar.
+
+#### Respaldos del sistema de archivos
+Incremental
+: Se respalda sólo lo que ha cambiado desde el último respaldo.
+
+Full
+: Se respalda bit a bit.
+
+Diferencial
+: Se respalda lo que ha cambiado desde el último respaldo completo (full).
+
+#### Consistencia del sistema de archivo
+- **UNIX:** fsck
+- **Windows:** scandisk
+
+Buscan y reparan errores en el sistema de archivo.
