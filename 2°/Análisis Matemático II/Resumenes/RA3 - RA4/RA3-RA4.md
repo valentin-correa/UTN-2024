@@ -46,7 +46,7 @@ $\space$
 
 **Para funciones de $R^{3}$**
 
-$Rot F(x,y,z) = \triangledown \times F(x,y,z) = \begin{vmatrix} i & j & k \\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\ M & N & P  \end{vmatrix}$ $= [(\frac{\partial P}{\partial y} - \frac{\partial N}{\partial z})i - (\frac{\partial P}{\partial x} - \frac{\partial M}{\partial z})j + (\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y})k]$
+$Rot F(x,y,z) = \triangledown \times F(x,y,z) =$ $\begin{vmatrix} i & j & k \\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\ M & N & P  \end{vmatrix}$ $= [(\frac{\partial P}{\partial y} - \frac{\partial N}{\partial z})i - (\frac{\partial P}{\partial x} - \frac{\partial M}{\partial z})j + (\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y})k]$
 
 
 <hr>
