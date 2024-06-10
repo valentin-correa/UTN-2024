@@ -66,9 +66,26 @@ Características:
 - Indica cuándo y en qué casos puede aplicarse.
 - Especifica las consecuencias de la aplicación.
 
-$$\space$$
-$$Filosofía \ de \ objetos$$
-$$\downarrow$$
-$$Reutilización$$
-$$\downarrow$$
-$$Experiencias - Soluciones \ de \ análisis \ y \ diseño - Códigos$$
+$$
+\space
+$$
+
+$$
+Filosofía \ de \ objetos
+$$
+
+$$
+\downarrow
+$$
+
+$$
+Reutilización
+$$
+
+$$
+\downarrow
+$$
+
+$$
+Experiencias - Soluciones \ de \ análisis \ y \ diseño - Códigos
+$$
