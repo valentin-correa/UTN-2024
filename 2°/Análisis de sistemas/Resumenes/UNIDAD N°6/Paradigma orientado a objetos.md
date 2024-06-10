@@ -54,16 +54,16 @@ Implementación
 ### Conceptos básicos
 
 **Envío de mensajes**
-Invocación de métodos. Medio de colaboración entre objetos.
+: Invocación de métodos. Medio de colaboración entre objetos.
 
 **Polimorfismo**
-Mismo nombre, distinta función.
+: Mismo nombre, distinta función.
 - Permite al modelador hablar el lenguaje del cliente
 - Evita asignar identificadores artificiosos para distinguir operaciones
 - Contribuye a la reutilización de código
 
 **Abstracción**
-Extraer propiedades esenciales de un objeto.
+: Extraer propiedades esenciales de un objeto.
 
 ### Elementos fundamentales
 
@@ -74,14 +74,14 @@ Extraer propiedades esenciales de un objeto.
 - Independencia
 
 **Modularidad**
-Sistema compuesto en módulos coherentes e independientes.
+: Sistema compuesto en módulos coherentes e independientes.
 > Alta cohesión y bajo acoplamiento.
 
 **Jerarquía**
-Orden de abstracción organizado en niveles.
+: Orden de abstracción organizado en niveles.
 
 **Herencia**
-Los objetos "heredan" las características de la clase. Las clases pueden heredar de otras clases.
+: Los objetos "heredan" las características de la clase. Las clases pueden heredar de otras clases.
 
 - Tipo de jerarquía
 - Generalización / Especialización
