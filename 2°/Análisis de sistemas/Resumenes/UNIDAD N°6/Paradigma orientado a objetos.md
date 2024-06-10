@@ -27,43 +27,52 @@ Forma de entender un problema identificando las entidades principales que se enc
 ### ¿Qué es un objeto?
 Entidades del mundo real que combinan **estado, comportamiento e identidad**
 
-Comportamiento
-: Métodos con que puede operar. Operaciones que se pueden realizar con él.
+**Comportamiento**
 
-Estado
-: Uno o varios atributos a los que se habrán asignado valores concretos *(datos)*
+Métodos con que puede operar. Operaciones que se pueden realizar con él.
 
-Identidad
-: Propiedad de un objeto que lo diferencia del resto. **Identificador**.
+**Estado**
+
+Uno o varios atributos a los que se habrán asignado valores concretos *(datos)*
+
+**Identidad**
+
+Propiedad de un objeto que lo diferencia del resto. **Identificador**.
 
 ### ¿Qué es una clase?
 Agrupación de objetos.
 
 Está compuesta por **características *(atributos)*** y **comportamientos *(métodos)***. `Ambos están determinados por el contexto del problema`
 
-Estado de un objeto
-: Valores de los atributos.
+**Estado de un objeto**
 
-Interfaz
-: Atributos y métodos del objeto.
+Valores de los atributos.
 
-Implementación
-: Código usado para construir las clases.
+**Interfaz**
+
+Atributos y métodos del objeto.
+
+**Implementación**
+
+Código usado para construir las clases.
 
 
 ### Conceptos básicos
 
 **Envío de mensajes**
-: Invocación de métodos. Medio de colaboración entre objetos.
+
+Invocación de métodos. Medio de colaboración entre objetos.
 
 **Polimorfismo**
-: Mismo nombre, distinta función.
+
+Mismo nombre, distinta función.
 - Permite al modelador hablar el lenguaje del cliente
 - Evita asignar identificadores artificiosos para distinguir operaciones
 - Contribuye a la reutilización de código
 
 **Abstracción**
-: Extraer propiedades esenciales de un objeto.
+
+Extraer propiedades esenciales de un objeto.
 
 ### Elementos fundamentales
 
@@ -74,14 +83,17 @@ Implementación
 - Independencia
 
 **Modularidad**
-: Sistema compuesto en módulos coherentes e independientes.
+
+Sistema compuesto en módulos coherentes e independientes.
 > Alta cohesión y bajo acoplamiento.
 
 **Jerarquía**
-: Orden de abstracción organizado en niveles.
+
+Orden de abstracción organizado en niveles.
 
 **Herencia**
-: Los objetos "heredan" las características de la clase. Las clases pueden heredar de otras clases.
+
+Los objetos "heredan" las características de la clase. Las clases pueden heredar de otras clases.
 
 - Tipo de jerarquía
 - Generalización / Especialización
@@ -91,14 +103,17 @@ Implementación
 
 ### Elementos secundarios
 
-Tipificación
-: Características precisas que comparten una serie de objetos.
+**Tipificación**
 
-Concurrencia
-: Diferentes objetos actuan al mismo tiempo. Distinue objetos activos de inactivos.
+Características precisas que comparten una serie de objetos.
 
-Persistencia
-: Cantidad de espacio que ocupa y tiempo que dura un objeto. Conservación del estado del objeto en el espacio y en el tiempo.
+**Concurrencia**
+
+Diferentes objetos actuan al mismo tiempo. Distinue objetos activos de inactivos.
+
+**Persistencia**
+
+Cantidad de espacio que ocupa y tiempo que dura un objeto. Conservación del estado del objeto en el espacio y en el tiempo.
 
 ### Parte estructural o estática del modelo
 - Objeto
