@@ -119,10 +119,10 @@ Cantidad de espacio que ocupa y tiempo que dura un objeto. Conservación del est
 
 > En una biblioteca, la **persistencia** permite guardar Libros y Préstamos en un almacenamiento para luego poder ser consultado.
 
-## 9. ¿Qué permite modelar el Modelo de Objetos del Dominio del Problema? ¿Qué herramienta se utiliza para desarrollarlo? [MAIL]
+## 9. ¿Qué permite modelar el Modelo de Objetos del Dominio del Problema? ¿Qué herramienta se utiliza para desarrollarlo?
+El modelo de objetos del dominio del problema permite modelar el vocabulario y los conceptos claves del dominio del problema. Dentro de ellos, se identifican todas las entidades que forman parte del sistema y se definen sus atributos y operaciones.
 
-### DIAGRAMA DE CLASE
-### UML
+Para desarrollarlo, se utiliza el **diagrama de clases**.
 
 ## 10. ¿Cómo se identifican las clases que participan de un dominio de problema?
 
@@ -135,7 +135,7 @@ Las clases son todo aquello que se necesita que el sistema administre dentro del
 - Hechos o eventos (Vuelo, Accidente, Incidente)
 - Otras organizaciones o áreas (Institución, Banco, Departamento de ventas)
 
-## 11. El diagrama de clases qué modela del sistema? ¿Qué vista del sistema muestra, dinámica o estática, interna o externa? Explique [Leer libro]
+## 11. El diagrama de clases qué modela del sistema? ¿Qué vista del sistema muestra, dinámica o estática, interna o externa? Explique.
 
 EL diagrama de clases modela la estructura y las relaciones estáticas entre las clases y objetos del sistema. No describe cómo interactúan los objetos, sino cómo están organizados y cómo se relacionan entre sí.
 
@@ -150,10 +150,10 @@ Una clase está conformada por:
 - **Operaciones:** Implementación de un servicio que puede ser requerido a cualquier objeto de la clase para que muestre un comportamiento. Abstracción de algo que se puede hacer a un objeto y que es compartido por todos los objetos de la clase.
 - **Responsabilidad:** Contrato u obligación de una clase. Las cosas que debe hacer.
 
-## 13. ¿Cuáles son las vistas de una clase? [MAIL]
+## 13. ¿Cuáles son las vistas de una clase?
 
-- Vista de diseño
-- Vista de implementación
+- **Vista de diseño/interfaz:** Como se ve la clase desde afuera.
+- **Vista de implementación:** Como se ve la clase desde adentro.
 
 ## 14. Envío de mensajes
 
