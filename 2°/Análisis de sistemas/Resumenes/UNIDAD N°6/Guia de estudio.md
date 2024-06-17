@@ -13,13 +13,13 @@ El paradigma orientado a objetos define clases como abstracciones de los objetos
 ## 3. Defina: Análisis OO, Diseño OO y programación OO.
 
 ### Análisis Orientado a Objetos
-Es el proceso de examinar los requisitos y descomponer el sistema en objetos y sus relaciones, identificando las clases que representan conceptos importantes del dominio del problema.
+Proceso de examinar los requisitos y especificaciones de un sistema para identificar los objetos y sus relaciones, que formarán la base del diseño orientado a objetos.
 
 ### Diseño Orientado a Objetos
-Consiste en definir la arquitectura del sistema y la interacción entre los objetos identificados durante el análisis. Incluye la definición de las clases, sus atributos y métodos, y la forma en que los objetos colaboran para cumplir con los requisitos del sistema.
+Enfoque de diseño de software que utiliza objetos y sus interacciones para modelar y resolver problemas, centrándose en la definición de clases y sus atributos, métodos y relaciones.
 
 ### Programación Orientada a Objetos
-Es la implementación del diseño OO utilizando un lenguaje de programación orientado a objetos. Se enfoca en escribir código que defina las clases y la lógica que gobierna la interacción entre los objetos.
+Paradigma de programacion basado en el uso de objetos, que son instancias de clases que encapsulan datos y comportamiento.
 
 ## 4. ¿Cuáles son las ventajas de la utilización del paradigma de objetos para el desarrollo de software?
 
@@ -101,17 +101,17 @@ Orden de abstracción organizado por niveles.
 ### Elementos secundarios
 
 #### Tipificación: 
-Características precisas que comparten una serie de objetos. Puesta en vigencia de la clase de los objetos.
+Comprobación de que los valores y las variables en un programa se utilicen de acuerdo a sus tipos definidos. Esto previene errores y asegura la integridad del comportamiento del programa al restringir las operaciones permitidas según el tipo de dato.
 
 > Auto sus atributos serian: marca, modelo, color
 
 #### Concurrencia: 
-Permite a diferentes objetos actuar al mismo tiempo. Distingue objetos activos de inactivos.
+Capacidad de un sistema para ejecutar múltiples procesos o hilos de manera simultánea, mejorando la eficiencia y capacidad de respuesta del sistema.
 
 > En un banco, la **concurrencia** permite la posibilidad de que varias personas puedan transferir, retirar y consultar su saldo al mismo tiempo.
 
 #### Persistencia: 
-Cantidad de espacio que ocupa y tiempo que dura un objeto. Conservación del estado del objeto en el espacio y en el tiempo.
+Capacidad de un objeto para conservar su estado más alla de la ejecución del programa, generalmente mediante almacenamiento en bases de datos o archivos.
 
 > En una biblioteca, la **persistencia** permite guardar Libros y Préstamos en un almacenamiento para luego poder ser consultado.
 
