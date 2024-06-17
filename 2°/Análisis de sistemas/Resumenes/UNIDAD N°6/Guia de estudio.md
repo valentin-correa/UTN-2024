@@ -13,19 +13,19 @@ El paradigma orientado a objetos define clases como abstracciones de los objetos
 ## 3. Defina: Análisis OO, Diseño OO y programación OO.
 
 ### Análisis Orientado a Objetos
-Se utilizan los objetos del mundo real como base para construir modelos.
+Es el proceso de examinar los requisitos y descomponer el sistema en objetos y sus relaciones, identificando las clases que representan conceptos importantes del dominio del problema.
 
 ### Diseño Orientado a Objetos
-Los elementos que forman los sistemas del mundo real se corresponden con objetos de software.
+Consiste en definir la arquitectura del sistema y la interacción entre los objetos identificados durante el análisis. Incluye la definición de las clases, sus atributos y métodos, y la forma en que los objetos colaboran para cumplir con los requisitos del sistema.
 
 ### Programación Orientada a Objetos
-Se organiza el software como una colección de objetos discretos que encapsulan **Estructuras de datos** y **Comportamiento**. Estos objetos colaboran y se comunican entre sí.
+Es la implementación del diseño OO utilizando un lenguaje de programación orientado a objetos. Se enfoca en escribir código que defina las clases y la lógica que gobierna la interacción entre los objetos.
 
 ## 4. ¿Cuáles son las ventajas de la utilización del paradigma de objetos para el desarrollo de software?
 
-• Componentes independientes y altamente reutilizables.
-• Comunicación mediante colaboraciones.
-• Bloques de construcción 🡪 objetos y clases.
+- Componentes independientes y altamente reutilizables.
+- Comunicación mediante colaboraciones.
+- Construye a través de objetos y clases.
 
 Los objetos administran sus propios datos y son responsables de sus propias funciones.
 
@@ -63,8 +63,6 @@ Entidad discreta con identidad, estado y comportamiento que se puede invocar.
 Las características de un objeto son sus atributos. Estos son dependientes del dominio del problema.
 
 > En un taller de pintura de vehículos, tenemos en cuenta el color del vehículo y no el estado de su motor.
-
-> En la clase Alumno no nos interesa saber su color de pelo.
 
 ## 8. ¿Cuáles son los elementos esenciales y los secundarios del modelo orientado a objetos? Dá un ejemplo de cada uno (que no sean los del libro)
 
@@ -111,8 +109,6 @@ Características precisas que comparten una serie de objetos. Puesta en vigencia
 Permite a diferentes objetos actuar al mismo tiempo. Distingue objetos activos de inactivos.
 
 > En un banco, la **concurrencia** permite la posibilidad de que varias personas puedan transferir, retirar y consultar su saldo al mismo tiempo.
-
-> En un sistema operativo, la concurrencia es nesesaria para el funcionamiento de multiples programas al mismo tiempo
 
 #### Persistencia: 
 Cantidad de espacio que ocupa y tiempo que dura un objeto. Conservación del estado del objeto en el espacio y en el tiempo.
