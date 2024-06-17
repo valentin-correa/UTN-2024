@@ -1,5 +1,7 @@
 # Guía de estudio
 
+## Link al mapa mental: **https://imgur.com/a/LeJsuJy**
+
 ## 1. ¿Qué es un paradigma?
 
 Conjunto de teorías, estándares, métodos que, unificados, representan una forma de organizar el conocimiento.
