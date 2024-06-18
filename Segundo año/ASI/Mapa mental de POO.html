@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.17.0/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/index.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Paradigma OO","children":[{"content":"Análisis OO, Diseño OO y programación OO","children":[{"content":"\n<p data-lines=\"13,14\">Análisis OO: Es el proceso de examinar un problema y su entorno para identificar las clases y objetos que formarán parte del sistema, así como sus relaciones y responsabilidades.</p>","children":[],"payload":{"lines":"13,15"}},{"content":"\n<p data-lines=\"15,16\">Diseño OO: Involucra la definición de la arquitectura del sistema mediante la especificación de las clases, sus atributos y métodos, y cómo interactúan entre sí para cumplir con los requisitos del sistema.</p>","children":[],"payload":{"lines":"15,17"}},{"content":"\n<p data-lines=\"17,18\">Programación OO: Es la implementación del diseño en un lenguaje de programación orientado a objetos, donde se crean las clases y objetos definidos en el diseño y se implementan sus métodos.</p>","children":[],"payload":{"lines":"17,19"}}],"payload":{"lines":"11,12"}},{"content":"Clase","children":[{"content":"Descripción de un conjunto de objetos que comparten los mismos atributos, operaciones, relaciones y semántica.","children":[],"payload":{"lines":"21,22"}},{"content":"Elementos que conforman una clase","children":[{"content":"Atributos: Datos que representan el estado de la clase.","children":[],"payload":{"lines":"25,26"}},{"content":"Métodos: Funciones que definen el comportamiento de la clase.","children":[],"payload":{"lines":"26,27"}},{"content":"Constructores: Métodos especiales utilizados para crear instancias de la clase.","children":[],"payload":{"lines":"27,28"}},{"content":"Relaciones: Asociaciones con otras clases.","children":[],"payload":{"lines":"28,30"}}],"payload":{"lines":"23,24"}}],"payload":{"lines":"19,20"}},{"content":"Objetos","children":[{"content":"Es una instancia de una clase, un caso particular, una entidad concreta.","children":[{"content":"El comportamiento está definido por los métodos con que puede operar dicho objeto, es decir, qué operaciones se pueden realizar con él.","children":[],"payload":{"lines":"34,35"}},{"content":"El estado representa uno o varios atributos a los que se habrán asignado unos valores concretos (datos).","children":[],"payload":{"lines":"35,36"}},{"content":"La identidad es una propiedad de un objeto que lo diferencia del resto, dicho con otras palabras, es su identificador","children":[],"payload":{"lines":"36,38"}}],"payload":{"lines":"32,33"}}],"payload":{"lines":"30,31"}},{"content":"Se modela utilanzando UML","children":[{"content":"Más concretamente DIAGRAMA DE CLASE","children":[],"payload":{"lines":"42,43"}}],"payload":{"lines":"40,41"}},{"content":"Vistas de una clase","children":[{"content":"Vista Interna: Detalles de implementación, incluyendo atributos y métodos privados.","children":[],"payload":{"lines":"46,47"}},{"content":"Vista Externa: Interfaz pública, mostrando los métodos y atributos accesibles a otros objetos.","children":[],"payload":{"lines":"47,48"}},{"content":"Vista Conceptual: El propósito y el rol de la clase dentro del sistema, sin entrar en detalles de implementación.","children":[],"payload":{"lines":"48,50"}}],"payload":{"lines":"44,45"}},{"content":"Envío de mensajes","children":[{"content":"Manera en que los objetos se comunican entre sí. Un objeto envía un mensaje a otro objeto invocando uno de sus métodos, lo que puede implicar pasar argumentos y recibir un valor de retorno","children":[],"payload":{"lines":"52,53"}}],"payload":{"lines":"50,51"}}],"payload":{"lines":"1,2"}},{})</script>
+</body>
+</html>
