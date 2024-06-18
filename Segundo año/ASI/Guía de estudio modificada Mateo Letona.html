@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Guía de estudio modificada Mateo Letona.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="gu%C3%ADa-de-estudio">Guía de estudio</h1>
+<h2 id="1-%C2%BFqu%C3%A9-es-un-paradigma">1. ¿Qué es un paradigma?</h2>
+<p>Conjunto de teorías, estándares, métodos que, unificados, representan una forma de organizar el conocimiento.</p>
+<p>Forma de “ver” y “entender” el mundo, es una forma de abstraerlo dentro de nuestra cabeza.</p>
+<h2 id="2-%C2%BFqu%C3%A9-define-el-paradigma-oo">2. ¿Qué define el paradigma OO?</h2>
+<p>• Componentes independientes y altamente reutilizables.
+• Comunicación mediante colaboraciones.
+• Bloques de construcción 🡪 objetos y clases.</p>
+<p>Los objetos administran sus propios datos y son responsables de sus propias funciones.</p>
+<p>Ayuda a combatir la complejidad.</p>
+<h2 id="3-defina-an%C3%A1lisis-oo-dise%C3%B1o-oo-y-programaci%C3%B3n-oo">3. Defina: Análisis OO, Diseño OO y programación OO</h2>
+<ul>
+<li>
+<p>Análisis OO: Es el proceso de examinar un problema y su entorno para identificar las clases y objetos que formarán parte del sistema, así como sus relaciones y responsabilidades.</p>
+</li>
+<li>
+<p>Diseño OO: Involucra la definición de la arquitectura del sistema mediante la especificación de las clases, sus atributos y métodos, y cómo interactúan entre sí para cumplir con los requisitos del sistema.</p>
+</li>
+<li>
+<p>Programación OO: Es la implementación del diseño en un lenguaje de programación orientado a objetos, donde se crean las clases y objetos definidos en el diseño y se implementan sus métodos.</p>
+</li>
+</ul>
+<h2 id="4-%C2%BFcu%C3%A1les-son-las-ventajas-de-la-utilizaci%C3%B3n-del-paradigma-de-objetos-para-el-desarrollo-de-software">4. ¿Cuáles son las ventajas de la utilización del paradigma de objetos para el desarrollo de software?</h2>
+<ul>
+<li>Reutilización: Las clases y objetos pueden ser reutilizados en diferentes partes del programa o en otros proyectos.</li>
+<li>Modularidad: Facilita la división del sistema en módulos independientes, lo que simplifica el mantenimiento y la comprensión del código.</li>
+<li>Escalabilidad: Permite el desarrollo de sistemas grandes y complejos de manera más manejable.</li>
+<li>Facilidad de Mantenimiento: La encapsulación ayuda a aislar cambios en el sistema, reduciendo el impacto en otras partes del código.</li>
+</ul>
+<h2 id="5-%C2%BFc%C3%B3mo-resuelve-el-paradigma-de-objetos-la-problem%C3%A1tica-de-la-complejidad-del-software">5. ¿Cómo resuelve el paradigma de objetos la problemática de la complejidad del software?</h2>
+<p>El paradigma de objetos maneja la complejidad mediante la abstracción, encapsulamiento, modularidad y jerarquía. La abstracción permite centrarse en aspectos relevantes del problema; el encapsulamiento oculta detalles internos de los objetos; la modularidad divide el sistema en partes manejables y la jerarquía de clases organiza el sistema en diferentes niveles.</p>
+<h2 id="6-definir-clase-y-objeto-dar-ejemplos">6. Definir clase y objeto. Dar ejemplos</h2>
+<h3 id="clase">Clase</h3>
+<p>Descripción de un conjunto de objetos que comparten los mismos atributos, operaciones, relaciones y semántica.</p>
+<ul>
+<li>Está compuesta por características (atributos) y comportamientos (métodos). Ambos están determinados por el contexto del problema.</li>
+</ul>
+<blockquote>
+<p>Alumno, Bebida, Vehículo, etc.</p>
+</blockquote>
+<h3 id="objetos">Objetos</h3>
+<p>Es una instancia de una clase, un caso particular, una entidad concreta.</p>
+<p>“Los objetos son entidades del mundo real que combinan estado, comportamiento e identidad”</p>
+<ul>
+<li>El comportamiento está definido por los métodos con que puede operar dicho objeto, es decir, qué operaciones se pueden realizar con él.</li>
+<li>El estado representa uno o varios atributos a los que se habrán asignado unos valores concretos (datos).</li>
+<li>La identidad es una propiedad de un objeto que lo diferencia del resto, dicho con otras palabras, es su identificador</li>
+</ul>
+<blockquote>
+<p>Mateo Letona, Coca Cola, Ciclomotor, etc.</p>
+</blockquote>
+<h2 id="7-%C2%BFcu%C3%A1les-son-las-caracter%C3%ADsticas-de-los-objetos-seg%C3%BAn-su-naturaleza">7. ¿Cuáles son las características de los objetos según su naturaleza?</h2>
+<p>Las características de un objeto son sus atributos. Estos son dependientes del dominio del problema.</p>
+<blockquote>
+<p>En la clase Alumno no nos interesa saber su color de pelo o no es redundante para el sistema.</p>
+</blockquote>
+<h2 id="8-%C2%BFcu%C3%A1les-son-los-elementos-esenciales-y-los-secundarios-del-modelo-orientado-a-objetos-d%C3%A1-un-ejemplo-de-cada-uno-que-no-sean-los-del-libro">8. ¿Cuáles son los elementos esenciales y los secundarios del modelo orientado a objetos? Dá un ejemplo de cada uno (que no sean los del libro)</h2>
+<h3 id="elementos-esenciales">Elementos esenciales</h3>
+<h4 id="abstracci%C3%B3n">Abstracción</h4>
+<p>Extraer las propiedades esenciales de un objeto que lo distinguen de los demás tipos de objetos y proporciona fronteras conceptuales definidas respecto al punto de vista del observador, en un determinado dominio del problema.</p>
+<blockquote>
+<p>Clase Vehículo $\rightarrow$ Ruedas, Motor, Asientos</p>
+</blockquote>
+<h4 id="encapsulamiento">Encapsulamiento</h4>
+<ul>
+<li>Ocultación de detalles</li>
+<li>Implementación</li>
+<li>Concepto de Interfaz</li>
+<li>Independencia</li>
+</ul>
+<blockquote>
+<p>En una clase Tarjeta, sería conveniente ocultar atributos como el número, el CVV.</p>
+</blockquote>
+<h4 id="jerarqu%C3%ADa">Jerarquía</h4>
+<p>Orden de abstracción organizado por niveles.</p>
+<blockquote>
+<p>La clase animal se crean las subclases de perro, gato, etc. Tambien podriamos tener mas subclases diferenciando los animales por reinos y otras caracteristicas.</p>
+</blockquote>
+<h3 id="elementos-secundarios">Elementos secundarios</h3>
+<h4 id="tipificaci%C3%B3n">Tipificación</h4>
+<p>Características precisas que comparten una serie de objetos. Puesta en vigencia de la clase de los objetos.</p>
+<blockquote>
+<p>Auto sus atributos serian: marca, modelo, color</p>
+</blockquote>
+<h4 id="concurrencia">Concurrencia</h4>
+<p>Permite a diferentes objetos actuar al mismo tiempo. Distingue objetos activos de inactivos.</p>
+<blockquote>
+<p>En un sistema operativo, la concurrencia es nesesaria para el funcionamiento de multiples programas al mismo tiempo</p>
+</blockquote>
+<h4 id="persistencia">Persistencia</h4>
+<p>Cantidad de espacio que ocupa y tiempo que dura un objeto. Conservación del estado del objeto en el espacio y en el tiempo.</p>
+<blockquote>
+<p>En una biblioteca, la <strong>persistencia</strong> permite guardar Libros y Préstamos en un almacenamiento para luego poder ser consultado.</p>
+</blockquote>
+<h2 id="9-%C2%BFqu%C3%A9-permite-modelar-el-modelo-de-objetos-del-dominio-del-problema-%C2%BFqu%C3%A9-herramienta-se-utiliza-para-desarrollarlo">9. ¿Qué permite modelar el Modelo de Objetos del Dominio del Problema? ¿Qué herramienta se utiliza para desarrollarlo?</h2>
+<h3 id="diagrama-de-clase">DIAGRAMA DE CLASE</h3>
+<h3 id="uml">UML</h3>
+<h2 id="10-%C2%BFc%C3%B3mo-se-identifican-las-clases-que-participan-de-un-dominio-de-problema">10. ¿Cómo se identifican las clases que participan de un dominio de problema?</h2>
+<p>Las clases se identifican a través del análisis de requisitos y del entendimiento del dominio del problema y son todo aquello que se necesita que el sistema administre dentro del dominio de análisis.</p>
+<p>Un ayuda memoria podria ser buscar dentro del dominio del problema</p>
+<p>Cosas tangibles, Personas, Lugares, Transacciones u operaciones, Hechos o eventos, Otras organizaciones o áreas</p>
+<h2 id="11-el-diagrama-de-clases-qu%C3%A9-modela-del-sistema-%C2%BFqu%C3%A9-vista-del-sistema-muestra-din%C3%A1mica-o-est%C3%A1tica-interna-o-externa-explique">11. El diagrama de clases qué modela del sistema? ¿Qué vista del sistema muestra, dinámica o estática, interna o externa? Explique</h2>
+<ul>
+<li>El diagrama de clases modela la estructura estática del sistema, mostrando las clases, sus atributos, métodos, y las relaciones entre ellas. Ofrece una vista estática y externa del sistema, enfocándose en cómo están organizados los componentes en lugar de cómo se comportan durante la ejecución.</li>
+</ul>
+<h2 id="12-%C2%BFcu%C3%A1les-son-los-elementos-que-conforman-una-clase">12. ¿Cuáles son los elementos que conforman una clase?</h2>
+<ul>
+<li>Atributos: Datos que representan el estado de la clase.</li>
+<li>Métodos: Funciones que definen el comportamiento de la clase.</li>
+<li>Constructores: Métodos especiales utilizados para crear instancias de la clase.</li>
+<li>Relaciones: Asociaciones con otras clases.</li>
+</ul>
+<h2 id="13-%C2%BFcu%C3%A1les-son-las-vistas-de-una-clase">13. ¿Cuáles son las vistas de una clase?</h2>
+<ul>
+<li>Vista Interna: Detalles de implementación, incluyendo atributos y métodos privados.</li>
+<li>Vista Externa: Interfaz pública, mostrando los métodos y atributos accesibles a otros objetos.</li>
+<li>Vista Conceptual: El propósito y el rol de la clase dentro del sistema, sin entrar en detalles de implementación.</li>
+</ul>
+<h2 id="14-env%C3%ADo-de-mensajes">14. Envío de mensajes</h2>
+<ul>
+<li>En la programación orientada a objetos, el envío de mensajes es la manera en que los objetos se comunican entre sí. Un objeto envía un mensaje a otro objeto invocando uno de sus métodos, lo que puede implicar pasar información (argumentos) y recibir una respuesta (valor de retorno)</li>
+</ul>
+
+</body>
+</html>
