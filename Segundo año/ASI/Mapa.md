@@ -1,4 +1,3 @@
-
 # Paradigma OO
 
 • Componentes independientes y altamente reutilizables.

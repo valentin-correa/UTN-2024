@@ -1,3 +1,4 @@
+![alt text](image-1.png)
 # Guía de estudio
 
 ## 1. ¿Qué es un paradigma?
