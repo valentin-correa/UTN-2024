@@ -57,7 +57,7 @@ El propósito de la programación es crear programas que exhiban un comportamien
 
 # Paradigmas fundamentales
 
-![image-20240812173806249](C:\Users\Valentín\AppData\Roaming\Typora\typora-user-images\image-20240812173806249.png)
+![image-20240812173806249](D:\REPOSITORIOS\UTN-2024\2°\Paradigmas de Programación\src\paradigmas.png)
 
 En la actualidad, los principales paradigmas que tienen vigencia son:
 
