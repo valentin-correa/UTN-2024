@@ -10,6 +10,8 @@ def customSplit(cadena, caracterSeparador):
     nuevaCadena.append(elemento)
     return nuevaCadena
 
+    # Consideración: Se podría agregar como strip() para no generar confusiones en el input de elementos del conjunto.
+
 
 def union(conjuntoA, conjuntoB):
     # Analizamos si al menos los conjuntos empiezan y terminan con llaves. Característica fundamental de conjuntos.
