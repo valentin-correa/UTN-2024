@@ -5,4 +5,4 @@ Relacionar los conceptos académicos vistos hasta el momento con tendencias actu
 - Colocarle en la visualización el nombre de la materia, año y nombre del alumno
 - Subir un archivo .txt a la plataforma con la URL donde se puede ver lo realizado
 
-<iframe src="https://www.youtube.com/watch?v=0aNbJejGbqw"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0aNbJejGbqw?si=XgaBKUIb-u5-6yj9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
