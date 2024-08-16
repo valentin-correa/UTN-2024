@@ -5,4 +5,4 @@ Relacionar los conceptos académicos vistos hasta el momento con tendencias actu
 - Colocarle en la visualización el nombre de la materia, año y nombre del alumno
 - Subir un archivo .txt a la plataforma con la URL donde se puede ver lo realizado
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0aNbJejGbqw?si=XgaBKUIb-u5-6yj9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/0aNbJejGbqw/0.jpg)](http://www.youtube.com/watch?v=0aNbJejGbqw "Paradigmas de Programación 2024 - Integrando Redes Sociales en el Aprendizaje - Correa Valentín")
