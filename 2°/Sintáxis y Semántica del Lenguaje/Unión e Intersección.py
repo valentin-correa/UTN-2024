@@ -46,3 +46,13 @@ def interseccion(conjuntoA, conjuntoB):
             return "No hay elementos en común entre los conjuntos."
     else:
         return ("Los conjuntos no han sido ingresados con el formato correspondiente.")
+
+
+def main():
+    conjuntoA = str(input("Ingrese el primer conjunto."))
+    conjuntoB = str(input("Ingrese el segundo conjunto."))
+    print(interseccion(conjuntoA, conjuntoB))
+
+
+if __name__ == "__main__":
+    main()
