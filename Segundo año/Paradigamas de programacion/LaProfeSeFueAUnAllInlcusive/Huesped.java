@@ -1,33 +1,21 @@
-
-/**
- * Write a description of class Huesped here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class Huesped
+public class Huesped extends Persona
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Huesped
-     */
+    private int nroHuesped;
+    private int nroPasaporte;
+    private Estadia estadia;
+    
     public Huesped()
     {
-        // initialise instance variables
-        x = 0;
+        
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public int conocerEstadia() { //No sabria como se traduciria esto a codigo 
+        
     }
+    
+    public int finalizarEstadia() { //No sabria como se traduciria esto a codigo 
+        
+    }
+    
+    
 }

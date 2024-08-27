@@ -8,11 +8,11 @@ public class Acceso{
     
     }
     
-    public void setCodigoDeAcceso(String codigo){
+    public void setCodigoDeAcceso(String codigo) {
         codigoDeAcceso = codigo;
     }
     
-    public String getCodigoDeAcceso(){
+    public String getCodigoDeAcceso() {
         return codigoDeAcceso;
     }
 }

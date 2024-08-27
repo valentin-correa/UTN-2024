@@ -1,33 +1,28 @@
-
-/**
- * Write a description of class Habitacion here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Habitacion
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Habitacion
-     */
+    private int nroHabitacion;
+    private TipoHabitacion tipo;
+    private Acceso ingreso;
+    
+    private String clave;
     public Habitacion()
     {
-        // initialise instance variables
-        x = 0;
+        clave = ingreso.getCodigoDeAcceso();
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    public boolean verificarClaveDeAcceso(String clave)
     {
-        // put your code here
-        return x + y;
+        if (clave == this.clave) {
+            return true;
+            registrarAcceso();
+        }
+        else {
+            return false;
+        }
     }
+    
+    private void registrarAcceso() {
+        
+    }
+    
 }
