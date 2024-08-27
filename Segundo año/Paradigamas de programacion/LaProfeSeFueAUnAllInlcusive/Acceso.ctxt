@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Acceso
+comment1.params=
+comment1.target=Acceso()
+comment2.params=codigo
+comment2.target=void\ setCodigoDeAcceso(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getCodigoDeAcceso()
+numComments=4

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Empleado
+comment1.params=
+comment1.target=Empleado()
+comment2.params=rol\ idEmpleado
+comment2.target=Empleado(Rol,\ int)
+comment3.params=codigoAccesoEmpleado
+comment3.target=void\ setCodigoAccesoEmpleado(java.lang.String)
+comment4.params=
+comment4.target=java.lang.String\ getCodigoAccesoEmpleado()
+numComments=5
