@@ -2193,30 +2193,13 @@
 											"height": 13,
 											"text": "+mostrar()",
 											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
-											"_id": "AAAAAAGRjxdgWdBgA9Q=",
-											"_parent": {
-												"$ref": "AAAAAAGRjv4Xqpm2ypo="
-											},
-											"model": {
-												"$ref": "AAAAAAGRjxdgUdBaUyc="
-											},
-											"font": "Arial;13;0",
-											"left": 269,
-											"top": 529,
-											"width": 137.93798828125,
-											"height": 13,
-											"text": "+Operation1()",
-											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 264,
 									"top": 494,
 									"width": 147.93798828125,
-									"height": 53
+									"height": 38
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -4000,7 +3983,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGRjre68yQQ9Z4="
 							},
-							"name": "nroHabitacion"
+							"name": "nroHabitacion",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4171,7 +4155,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGRjrfbfSQ6QLo="
 							},
-							"name": "Id"
+							"name": "Id",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4226,7 +4211,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGRjrf74yRkMjs="
 							},
-							"name": "nombre"
+							"name": "nombre",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4234,7 +4220,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGRjrf74yRkMjs="
 							},
-							"name": "apellido"
+							"name": "apellido",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4242,7 +4229,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGRjrf74yRkMjs="
 							},
-							"name": "mail"
+							"name": "mail",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4250,7 +4238,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGRjrf74yRkMjs="
 							},
-							"name": "numeroDeTelefono"
+							"name": "numeroDeTelefono",
+							"type": ""
 						}
 					]
 				},
@@ -4368,7 +4357,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGRjrgnaySRx6o="
 							},
-							"name": "nroHuesped"
+							"name": "nroHuesped",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4376,7 +4366,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGRjrgnaySRx6o="
 							},
-							"name": "nroPasaporte"
+							"name": "nroPasaporte",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4594,7 +4585,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGRjrhbcCS7EXE="
 							},
-							"name": "idEmpleado"
+							"name": "idEmpleado",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4611,7 +4603,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGRjrhbcCS7EXE="
 							},
-							"name": "codigoAccesoEmlpeado"
+							"name": "codigoAccesoEmlpeado",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -4820,7 +4813,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGRjsiC43XiIFo="
 							},
-							"name": "nroDeTarjeta"
+							"name": "nroDeTarjeta",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -4914,7 +4908,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGRjvnzg5Qw6OM="
 							},
-							"name": "nroEstadia"
+							"name": "nroEstadia",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4922,7 +4917,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGRjvnzg5Qw6OM="
 							},
-							"name": "fechaIngreso"
+							"name": "fechaIngreso",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4930,7 +4926,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGRjvnzg5Qw6OM="
 							},
-							"name": "fechaEgresoPrevista"
+							"name": "fechaEgresoPrevista",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4949,7 +4946,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGRjvnzg5Qw6OM="
 							},
-							"name": "codigoAccesoHuesped"
+							"name": "codigoAccesoHuesped",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4957,7 +4955,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGRjvnzg5Qw6OM="
 							},
-							"name": "fechaDeEgresoReal"
+							"name": "fechaDeEgresoReal",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -5066,7 +5065,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGRjv4XqpmtNQQ="
 							},
-							"name": "precioPorNocheActual"
+							"name": "precioPorNocheActual",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -5074,7 +5074,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGRjv4XqpmtNQQ="
 							},
-							"name": "descripcion"
+							"name": "descripcion",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -5082,7 +5083,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGRjv4XqpmtNQQ="
 							},
-							"name": "nombre"
+							"name": "nombre",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -5101,14 +5103,6 @@
 								"$ref": "AAAAAAGRjv4XqpmtNQQ="
 							},
 							"name": "mostrar"
-						},
-						{
-							"_type": "UMLOperation",
-							"_id": "AAAAAAGRjxdgUdBaUyc=",
-							"_parent": {
-								"$ref": "AAAAAAGRjv4XqpmtNQQ="
-							},
-							"name": "Operation1"
 						}
 					]
 				},
@@ -5126,7 +5120,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGRjwAyA5s39xw="
 							},
-							"name": "fecha"
+							"name": "fecha",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -5134,7 +5129,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGRjwAyA5s39xw="
 							},
-							"name": "codigoDeAcceso"
+							"name": "codigoDeAcceso",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -5170,7 +5166,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGRjx8jpelukNE="
 							},
-							"name": "nombre"
+							"name": "nombre",
+							"type": ""
 						}
 					],
 					"operations": [
