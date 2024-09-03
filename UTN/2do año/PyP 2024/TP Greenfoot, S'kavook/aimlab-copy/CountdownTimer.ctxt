@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=CountdownTimer
+comment1.params=time
+comment1.target=CountdownTimer(long)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=timeLeft
+comment3.target=void\ updateImage(long)
+comment4.params=
+comment4.target=void\ setStartTime()
+comment5.params=
+comment5.target=long\ getTimeLeft()
+numComments=6

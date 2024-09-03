@@ -1,0 +1,78 @@
+Problema 4.1
+
+1) Entendimiento del problema
+1.1) Leer números, determinar si están en órden, mostrar resultados
+
+2) Planteamiento 
+2.1) Leer números
+2.2) Si a<b entonces se encuentra en orden creciente
+2.3) Si es así se escribe están en orden creciente
+2.4) Si no es así se escribe no están en orden creciente
+--------------------------------------------------------------------------------
+Problema 4.2
+
+1) Entendimiento del problema
+1.1) Leer datos, calcular precio del billete, mostrar precio
+
+2) Planteamiento de un plan
+2.1) Leer datos
+2.2) Ver si estos cumplen con los mínimos para que se le aplique el descuento
+2.3) Si los cumplen, el precio tiene un 30% de descuento
+2.4) Si no los cumplen, el precio no tiene descuento
+2.5) Se muestra el precio final
+
+3) Ejecución del plan
+3.1) Se escribe la pregunta "¿De cuánto tiempo será su estancia?"
+3.2) Se toma el dato "estancia"
+3.3) Se escribe la pregunta "¿Cuántos kilómetros recorrerá?"
+3.4) Se toma el dato "distancia"
+3.5) Se le da un valor al precio que puede variar dependiendo de los datos
+3.6) Si la estancia es mayor a 7 días y la distancia mayor a 800 kilómetros al precio se le resta su 30%
+3.7) Si no es así el precio no cambia
+3.8) Se escribe el precio final
+--------------------------------------------------------------------------------
+Problema 4.3
+
+1) Entendimiento del problema
+1.1) Leer datos, calcular el jornal diario, mostrar resultado
+
+2) Planteamiento de un plan
+2.1) Leer datos
+2.2) Determinar el día en el que se hará el cálculo del jornal
+2.3) Determinar las horas trabajadas en el turno diurno
+2.4) Determinar las horas trabajadas en el turno nocturno
+2.5) Si el día es domingo se calcula con las tarifas de domingo
+2.6) Si no es domingo se calcula con las tarifas normales
+2.7) Mostrar tarifa total
+
+3) Ejecución del plan
+3.1) Escribir "Ingresar día de trabajo"
+3.2) Tomar el dato "dia"
+3.3) Escribir "Cuántas horas trabajó el empleado entre las 6:00am y 20:00pm?"
+3.4) Tomar dato "turno_diurno"
+3.5) Escribir "Cuántas horas trabajó el empleado entre las 20:00pm y las 6:00am?"
+3.6) Tomar dato "turno_nocturno"
+3.7) Si "dia" no es "domingo" "turno_diurno" se multiplica por 5 y "turno_nocturno" por 8
+3.8) Si "dia" es "domingo" "turno_diurno" se multiplica por 7 y "turno_nocturno" por 11
+3.9) La tarifa total = turno_diurno + turno_nocturno
+3.10) Escribir el resultado de la tarifa total
+--------------------------------------------------------------------------------
+Problema 4.4
+
+1) Entendimiento del problema
+1.1) Leer día, determinar qué día es, mostrar los días siguientes
+
+2) Planteamiento de un plan
+2.1) Se lee el día ingresado
+2.2) Se determina cuál es
+2.3) Dependiendo de este se determinan los días faltantes
+2.4) Se muestran los días faltantes en orden
+
+3) Ejecución del plan
+3.1) Se escribe "Ingrese un día de la semana"
+3.2) Se lee el día
+3.3) Se ingresa el comando "Segun"
+3.4) Según el día ingresado se escriben los faltantes en orden
+//Por ejemplo, si se ingresa 4, se completa como "5, 6, 7, 1, 2, 3"
+
+

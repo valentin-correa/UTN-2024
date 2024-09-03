@@ -1,0 +1,73 @@
+Intercambio: método para lidiar con la sobrecarga de memoria, este consiste en llevar los procesos a memoria principal a medida que se necesite, cuando el proceso finaliza se lo regresa al disco, donde se encuentran los procesos inactivos. Cuando el intercambio crea huecos en la memoria, es posible hacer combinaciones para poder tener la mayor cantidad de procesos funcionando, esto se llama COMPACTACIÓN DE MEMORIA. Por lo general no se realiza ya que requiere de mucho tiempo de la CPU.
+
+El tamaño del MAPA DE BITS es fijo ya que este depende del tamaño de la memoria y de la unidad de asignación. VER MAPA DE BITS DE NUEVO
+
+MMU (Memory Managment Unit): asocia las direcciones virtuales a las direcciones de memoria físicas (direcciones en la RAM)
+
+El propósito de la tabla de páginas es asociar páginas virtuales a los marcos de página
+
+1-segmentación 1
+2-TLB 1
+3-NRU 1
+4-best fit 1 
+5-dirección virtual 0
+6-FAT 0
+7-Lista de archivos 0
+8-Asignación contigua 0
+9-NO SE / ordered journaling 0
+10-NO SE / c,d 1
+11-NO SE / Directorio raíz 0
+12-NO SE / Transactional Journaling 0
+13-b? 1
+14-No se encontró la página en la memoria 0
+15-NO SE / Asignación contigua (no creo) 1
+16-NI IDEA LOCO 0
+17-d 1
+18- Externa 1
+19-c 1
+20-NO SE / mixta 1
+
+21-V 1
+22-F 1
+23-F 0
+24-V 0
+25-V 1
+26-F 1
+27-V 1
+28-V 1
+29-V 1
+30-V 0
+
+
+
+
+
+
+Estructuras de archivos:
+
+	-Secuencia de bytes: al SO no le interesa el contenido del archivo, este lo ve solo como una secuencia de bytes, lo que hace que haya mayor flexibilidad.
+
+	-Secuencia de registros de longitud fija: esta idea se basa en que en la lectura del archivo devuelva registros y en la escritura se sobreescriban o agreguen registros.
+	
+	-Árbol de registros: se divide por "campos llave" y no importa la longitud de los registros.
+
+Archivos regulares
+	-Contienen info del usuario, usualmente están en ASCCI o Binario
+	Directorios
+		-Son sistemas¿ de archivos que existen para que se mantenga la estructura del mismo
+	Archivos especiales de bloque
+		-Se usan para modelar discos
+	
+Acceso a archivos
+	-Los archivos que se pueden leer en cualquier orden son llamados "archivos de acceso aleatorio"
+
+ATRIBUTOS == METADATOS, por ejemplo: fecha de creación, última modificación, tipo de archivo, etc.
+
+
+DIRECTORIOS
+	Sistemas de directorios de un nivel
+		-Estos se basan en que un directorio contenga todos los demás directorios, este es llamado "directorio raíz"
+	Sistemas de directorios jerárquicos
+		-Árbol de directorios, pueden existir múltiples directorios dentro de uno.
+
+

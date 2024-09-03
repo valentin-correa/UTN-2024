@@ -1,0 +1,44 @@
+Paradigma: Un patrón o modelo
+
+	Paradigma de programación: Modelo básico de diseño e implementación de programas, que permite desarrollar software
+				   conforme a ciertos principios o fundamentos específicos que se aceptan como válidos.
+		
+		"Desde una mirada más amplia, los paradigmas son la forma de pensar y entender un problema y su solución, 
+		y por lo tanto, de enfocar la tarea de la programación"
+		
+	Paradigmas fundamentales:
+		- Lógico
+		- Funcional
+		- Imperativo o procedural
+		- Objetos
+	
+	Imperativo --> Estructurado
+	
+	Declarativo --> Funcional, Lógico
+
+	
+	Imperativo: describe paso a paso un conjunto de instrucciones que deben ejecutarse para
+		    variar el estado del programa y hallar la solución, es decir, un algoritmo en el que se describen los pasos
+		    necesarios para solucionar el problema.
+	
+		Ventajas: rápida ejecución, de facil mantenimiento (bien modularizado), posibilidad de 
+			  claridad en la estructura del programa (siempre y cuando exista cierto orden).
+		
+		Limitaciones: La complejidad de muchos sistemas actuales hace que sea complicado definir
+			      la distribución del código en módulos; no se adapta a todos los tipos de 
+			      problemas.
+
+		Aplicaciones: 
+			- Sistemas de bajo nivel
+			- Sistemas de tiempo real
+		        - Programación de micro controladores
+			- Máquinas de estado
+			- Desarrollo de videojuegos de consola
+			- Aplicaciones que deben manejar recursos limitados
+
+
+	Programa: Conjunto de códigos, instrucciones, declaraciones, proposiciones, etc. Que describen, definen o 
+		  caracterizan la realización de una acción en la computadora.
+
+
+	

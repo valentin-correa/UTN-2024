@@ -1,0 +1,57 @@
+-------------------------------
+FUNCIONES
+
+-Números reales.
+-Intervalos. 
+-Inecuaciones.
+-Entorno. 
+-Valor Absoluto.
+-Propiedades. 
+-Funciones escalares: definición, dominio e imagen.
+-Funciones par e impar.
+-Distintas formas de representar una función.
+-Forma gráfica. 
+-Modelos matemáticos. 
+-Funciones algebraicas, potencial, racional e irracional.
+-Funciones trigonométricas.
+-Funciones trascendentes: exponenciales y logarítmicas. 
+-Funciones hiperbólicas. 
+-Operaciones con funciones.
+-Composición de funciones. 
+-Características.
+-Función inversa.
+--------------------------------
+LÍMITE
+
+-Límite de una función.
+-Propiedades y cálculo.
+-Definición precisa de límites laterales.
+-Infinitésimos. 
+-Límites infinitos, asíntota vertical.
+-Límites al infinito, asíntota horizontal.
+-Asíntota oblicua.
+-Casos indeterminados de
+límite.
+-Continuidad de una función: en un punto, en un intervalo abierto y en un intervalo cerrado.
+-Discontinuidad de una función.
+-Clasificación: discontinuidad evitable, esencial: de salto e infinita.
+-Variación media de una función: concepto e interpretación geométrica. 
+-Aplicaciones.
+-Variación instantánea: concepto e interpretación geométrica. 
+-Ecuación de la recta tangente a una curva en uno de sus puntos. 
+--------------------------------
+DERIVADAS
+
+-Laterales.
+-Función derivada.
+-Reglas de derivación.
+-Uso de tablas de derivación.
+-Derivada de funciones compuestas.
+-Regla de la cadena.
+-Derivadas de orden superior.
+-Aplicaciones a la resolución de problemas sobre razones de cambio y ritmo de crecimiento de funciones.
+-Aproximaciones lineales y diferenciales. 
+-Diferencial de una función: concepto e interpretación geométrica. 
+-Relación entre el incremento de una función y la diferencial. 
+-Aplicaciones.
+-Polinomio de Taylor y Mac Laurin.

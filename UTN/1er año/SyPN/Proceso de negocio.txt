@@ -1,0 +1,4 @@
+Proceso de compra de helado en local Grido
+
+El cliente ingresa al local y es atendido por un empleado que le consulta qué desea comprar. Teniendo esta información, el empleado consulta al cliente si este tiene una "Tarjeta Grido" o el DNI de la persona asociada a la tarjeta. Esto lo hace para poder cargar la tarjeta con puntos (estos dependen del producto adquirido) que pueden canjearse por productos que se encuentran a la venta.
+Si lo que el cliente quiere comprar es algo que se encuentra en las heladeras, este puede retirar el producto, si no es así el cliente pasa a ser atendido por otro empleado que le informa cuantos gustos de helado puede elegir (depende del tipo o la cantidad de helado que el cliente haya comprado) y le consulta qué gustos quiere. Posteriormente el empleado sirve el helado, ya sea en un pote o cucurucho y le 

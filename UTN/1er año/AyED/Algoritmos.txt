@@ -1,0 +1,14 @@
+Paso 1) Leer números, determinar si cada valor ingresado es primo, mostrar la suma de los números primos
+
+Paso 2) 
+1. Preguntarle al usuario cuántos números va a ingresar para utilizarlo como límite
+2. Crear contador para que cuando supere el límite, el algoritmo finalice
+3. Determinar si los números ingresados son primos, si lo son escribirlo
+4. Si el número es primo sumarlo a una variable
+5. Mostrar la suma de los números primos ingresados
+
+
+Paso 3) Determinar si un número es primo: si al restarle sucesivamente 2, 3, 5, 7 u 11 el resto es 0, entonces el número no es primo, si es distinto de 0, entonces es primo.
+
+Paso 4) Si el número es 2, 3, 5, 7 u 11, este deberá ser tomado como primo. 
+

@@ -1,0 +1,57 @@
+1. Objetivo: El objetivo del sistema es brindar un servicio de préstamo de material bibliografico
+
+2- 
+
+3. 
+- Realizar asociación
+- Solicitar documentación
+- Realizar préstamo
+
+
+4. Persona interesada en material bibliográfico
+
+5. Socio con material bibliográfico prestado
+
+6. Bibliotecarios, Administración, libros, estantes, mesas, sillas.
+
+7. HACERLO DESPUÉS
+
+8. Brindar información acerca del préstamo de material bibliográfico emitiendo informes para brindar apoyo en la toma de decisiónes.
+
+9. Alcances en detalle: 
+- Administrar lector
+	Registrar[Estado, DNI, datos personales, fecha préstamo, fecha devolución]
+	Actualizar[]
+	Consultar[]
+	Eliminar[*]
+- Administrar libros
+	Registrar[ID Libro, Estado, Datos libro]
+	Actualizar[]
+	Consultar[]
+	Eliminar[*]
+- Administrar Datos libro
+	Registrar[Autor, Título, Categoría, Temática, Editorial]
+	Actualizar[]
+	Consultar[]
+	Eliminar[*]
+
+Alcances generales:
+- Gestionar préstamo
+	Solicitar documentación
+	Verificar estado de lector
+	Consultar disponibilidad de material bibliográfico
+	Actualizar stock de material bibliográfico
+	Emitir comprobante de préstamo[ID, lector, libro, fecha préstamo, fecha devolución]
+
+- Gestionar informes
+	Emitir informe libros más prestados anualmente[Datos libro, ID informe]
+	Emitir informe de autores más leidos[Datos libro, ID informe]
+
+10. Informe libros más prestados anualmente: Nivel directivo, es así ya que a partir de esta información se puede ampliar el stock de libros muy solicitados.
+Informe de autores más leidos: Nivel control, con esta información se puede modificar la ubicación de los libros en los estantes.
+
+
+
+	
+
+

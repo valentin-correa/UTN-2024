@@ -1,0 +1,55 @@
+1) Definir el Sistema de Información (Objetivo, Límite y Alcances)
+
+2) Describir dos salidas del sistema de información indicando para qué nivel va
+orientada la información
+
+
+1- Objetivo: Brindar información sobre la gestión de ventas y mercadería, emitiendo informes para brindar apoyo a la hora de tomar decisiones.
+   Límite: Desde que el cliente realiza el pedido al vendedor Hasta que el cliente paga el monto correspondiente.
+   
+Alcances generales:
+
+Administrar Cliente
+	Registrar Cliente[Nombre, DNI, ]
+	Actualizar Cliente[]
+	Eliminar Cliente[*]
+	Consultar Cliente[]
+
+Administrar Nota de Pedido
+	Registrar Nota de Pedido[Nombre, Identificador, Dirección, Monto, Código postal]
+	Actualizar Nota de Pedido[Nombre, Identificador, Dirección, Monto, Código postal]
+	Eliminar Nota de Pedido[*]
+	Consultar Nota de Pedido[Nombre, Identificador, Dirección, Monto, Código postal]	
+
+Administrar Mercadería
+	Registrar Mercadería[Nombre, Identificador, Stock]
+	Actualizar Mercadería[[Nombre, Identificador, Stock]
+	Eliminar Mercadería[*]
+	Consultar Mercadería[Nombre, Identificador, Stock]	
+
+Administrar Pedido
+	Registrar Pedido[Nombre, Identificador, Nota de pedido]
+	Actualizar Pedido[Nombre, Identificador, Nota de pedido]
+	Eliminar Pedido[*]
+	Consultar Pedido[Nombre, Identificador, Nota de pedido]	
+
+Alcances específicos:
+
+Gestionar pedido
+	Verificar Cliente
+	Emitir Nota de pedido [ID Pedido, Mercaderías, Costo, Ubicación de reparto]
+	Registrar Pedido
+	Consultar Mercadería [Estado, Stock]
+	Actualizar Nota de pedido [Estado]
+	Actualizar Mercadería [Stock]
+	Actualizar Cobros [Estado]
+	Emitir Factura Original, Duplicado y Triplicado [ID Cliente, ID de la factura, Monto, Información personal del cliente, artículos]
+	Emitir itinerario de entregas [Ubicación, Horarios de recepción]
+	Emitir Nota de devolución [ID Factura, Detalles de los productos devueltos]
+	Emitir Recibo [Monto, Nombre del cliente, Apellido del cliente, ID del recibo]
+
+	
+
+2) Emisión de factura: Nivel Técnico
+   Emisión de nota de pedido: Nivel Técnico
+
